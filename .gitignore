@@ -5,8 +5,8 @@ cutouts.tex
 data/processed/
 data/interim/
 TODO.md
-output/plots/*.jpg
-output/plots/*.png
+#output/plots/*.jpg
+#output/plots/*.png
 output/tables/*.tex
 report/*.aux
 report/diagnostics

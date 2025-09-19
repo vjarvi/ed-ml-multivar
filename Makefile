@@ -4,9 +4,14 @@
 # GLOBALS                                                                       #
 #################################################################################
 
-SHELL = /bin/zsh
+# if these directories don't exist, create them
+# mkdir -p data/interim
+# mkdir -p data/processed/prediction_matrices/{05,50,95}
+# mkdir -p data/processed/{models,studies}
 
-mordir :=  /Users/jalmarituominen/fun/ed-mor/data/interim
+SHELL = /bin/bash # changed from zsh to bash
+
+mordir :=  /home/valtti/code/ed-ml-multivar/data/interim
 rawdir := data/raw
 interimdir := data/interim
 preddir := data/processed/prediction_matrices
@@ -16,39 +21,11 @@ MORDATA := $(wildcard $(mordir)/*suht.csv)
 RAWDATAUP := $(patsubst $(mordir)/%.csv, $(rawdir)/%.csv, $(MORDATA))
 RAWDATA = $(shell echo $(RAWDATAUP) | tr A-Z a-z)
 
-SN = $(preddir)/50/occ-sn-u-1.csv\
 
-DEEPAR = $(preddir)/50/occ-deepar-u-0.csv\
-	$(preddir)/50/occ-deepar-a-0.csv\
-	$(preddir)/50/occ-deepar-u-1.csv\
-	$(preddir)/50/occ-deepar-a-1.csv\
-
-LGBM = $(preddir)/50/occ-lgbm-u-0.csv\
-	$(preddir)/50/occ-lgbm-a-0.csv\
-	$(preddir)/50/occ-lgbm-u-1.csv\
-	$(preddir)/50/occ-lgbm-a-1.csv\
-
-TFT = $(preddir)/50/occ-tft-u-0.csv\
-	$(preddir)/50/occ-tft-a-0.csv\
-	$(preddir)/50/occ-tft-u-1.csv\
-	$(preddir)/50/occ-tft-a-1.csv\
-
-ARIMAX = $(preddir)/50/occ-arimax-u-1.csv\
-
-NBEATS = $(preddir)/50/occ-nbeats-u-0.csv\
-	$(preddir)/50/occ-nbeats-u-1.csv\
-
-ETS = $(preddir)/50/occ-hwam-u-1.csv\
-	$(preddir)/50/occ-hwdm-u-1.csv
+CHRONOS = $(preddir)/50/occ-chronos-u-0.csv\
 
 SCRIPTS = scripts/train.py\
-	scripts/models/arimax.py\
-	scripts/models/deepar.py\
-	scripts/models/hwam.py\
-	scripts/models/hwdm.py\
-	scripts/models/lgbm.py\
-	scripts/models/nbeats.py\
-	scripts/models/tft.py\
+	scripts/models/chronos.py\
 	scripts/models/utils.py
 
 PLOT1 = output/plots/beds.jpg\
@@ -86,9 +63,30 @@ TEXFILES = report/manuscript.tex\
 	report/sections/declarations.tex\
 	report/sections/conclusions.tex\
 
-PREDDATA = $(SN) $(DEEPAR) $(NBEATS) $(LGBM) $(TFT) $(ARIMAX) $(ETS)
+PREDDATA = $(CHRONOS)
 
 TRUEDATA = data/processed/true_matrices/occ.csv
+
+# Notebooks testing pipeline
+# List of test notebooks and context lengths to run with
+TEST_NOTEBOOKS := $(wildcard notebooks/test_*.ipynb)
+# User-editable list of context lengths; space-separated (e.g., 128 256 512)
+CONTEXTLENGTHS ?= 8 16 24 32 48 72 96 120 144 168 192 224 256 288 320 352 384 416 448 480 \
+				1024 2048 4096 8192 12840
+
+# Per-notebook virtual environments (user-editable)
+# Set these to the absolute path of the venv directory (containing bin/activate)
+# Example:
+# NB_VENV_test_moirai2 = /home/user/.venvs/moirai2
+# NB_VENV_test_chronos = /home/user/.venvs/chronos
+NB_VENV_test_moirai2 ?= /home/valtti/code/ed-ml-multivar/uni2ts/venv
+NB_VENV_test_chronos ?= /home/valtti/code/ed-ml-multivar/env-chronos
+NB_VENV_test_tirex ?= /home/valtti/code/ed-ml-multivar/env-tirex
+NB_VENV_test_sundial ?= /home/valtti/code/ed-ml-multivar/env-sundial
+NB_VENV_test_timesfm ?= /home/valtti/code/ed-ml-multivar/env-timesfm
+
+# Export venv variables so they are visible in shell recipes
+export NB_VENV_test_moirai2 NB_VENV_test_chronos NB_VENV_test_tirex NB_VENV_test_sundial NB_VENV_test_timesfm
 
 #################################################################################
 # FUNCTIONS                                                                     #
@@ -120,9 +118,7 @@ preddata: $(PREDDATA)
 
 figures: $(FIGURES)
 
-tft: $(TFT)
-
-lgbm: $(LGBM)
+chronos: $(CHRONOS)
 
 output/declarations.pdf: report/declarations.tex report/sections/declarations.tex
 	cd report/\
@@ -176,21 +172,18 @@ $(TABLES): output/tables/%.tex: notebooks/tab_%.ipynb $(TRUEDATA)
 	cd notebooks\
 	&& papermill $(notdir $<) /dev/null
 
+# --account $(ACCOUNT)\ add after row 194 if using SLURM ?
 $(PREDDATA): $(preddir)%.csv : $(SCRIPTS) data/interim/data.csv
-	if command -v sbatch &> /dev/null;\
-	then;\
-		export TARGET=$(call get_word,1,$@)\
-		&& export MODEL=$(call get_word,2,$@)\
-		&& export FEATURESET=$(call get_word,3,$@)\
-		&& export HPO=$(call get_word,4,$@)\
-		&& sbatch\
-		--output logs/slurm/$(call get_word,1,$@)-$(call get_word,2,$@)-$(call get_word,3,$@)-$(call get_word,4,$@).log\
-		--job-name $(call get_word,1,$@)-$(call get_word,2,$@)-$(call get_word,3,$@)-$(call get_word,4,$@)\
-		--account $(ACCOUNT)\
-		scripts/batch_$(call get_word,2,$@).sh;\
-	else;\
-		cd scripts\
-		&& python train.py $(call get_word,1,$@) $(call get_word,2,$@) $(call get_word,3,$@) $(call get_word,4,$@);\
+	if command -v sbatch &> /dev/null; then \
+		export TARGET=$(call get_word,1,$@) && \
+		export MODEL=$(call get_word,2,$@) && \
+		export FEATURESET=$(call get_word,3,$@) && \
+		export HPO=$(call get_word,4,$@) && \
+		sbatch --output logs/slurm/$$TARGET-$$MODEL-$$FEATURESET-$$HPO.log \
+		--job-name $$TARGET-$$MODEL-$$FEATURESET-$$HPO \
+		scripts/batch_$(call get_word,2,$@).sh; \
+	else \
+		cd scripts && python train.py $(call get_word,1,$@) $(call get_word,2,$@) $(call get_word,3,$@) $(call get_word,4,$@); \
 	fi
 
 # FIXME: For I am probably broken
@@ -200,6 +193,28 @@ $(TRUEDATA): scripts/create_true_matrix.py
 data/interim/data.csv: data/raw/data.csv notebooks/preprocess_data.ipynb
 	cd notebooks\
 	&& papermill preprocess_data.ipynb /dev/null
+
+# -----------------------------------------------------------------------------
+# Run all test notebooks for all configured CONTEXTLENGTHS
+.PHONY: tests
+tests:
+	cd notebooks\
+	&& for nb in $(notdir $(TEST_NOTEBOOKS)); do \
+		base=$${nb%.ipynb}; \
+		venv_var=NB_VENV_$$base; \
+		venv_path=$${!venv_var}; \
+		if [ -n "$$venv_path" ]; then \
+			echo "Activating venv for $$nb: $$venv_path"; \
+			. "$$venv_path/bin/activate"; \
+			PYBIN="$$venv_path/bin/python"; \
+		else \
+			PYBIN="python"; \
+		fi; \
+		for cl in $(CONTEXTLENGTHS); do \
+			echo "Running $$nb with CONTEXTLENGTH=$$cl"; \
+			"$$PYBIN" -m papermill $$nb /dev/null -p CONTEXTLENGTH $$cl; \
+		done; \
+	done
 
 #################################################################################
 # Helper Commands                                                     #
