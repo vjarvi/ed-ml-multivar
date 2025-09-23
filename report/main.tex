@@ -74,7 +74,7 @@
 %   programs - if you wish to display code snippets
 % Example: \documentclass[english, authoryear]{tauthesis}
 %          thesis in English with author-year citations
-\documentclass{tauthesis}
+\documentclass[english]{tauthesis}
 
 % The glossaries package throws a warning:
 % No language module detected for 'finnish'.
@@ -168,11 +168,11 @@
 % the primary language as the first argument
 % and its translation to the secondary language
 % as the second.
-\title{Kuvaava otsikko}{A Descriptive Title}
-\subtitle{Tarkentava alaotsikko}{A Specifying Subtitle}
+\title{Foundational Time Series Models For Emergency Department Occupancy Prediction}{A Descriptive Title}
+\subtitle{otsikko vaihdetaan, (comparing foundational models to other ml methods?)}{}
 
 % The author name.
-\author{Etunimi Sukunimi}
+\author{Valtti Järvi}
 
 % The examiner information.
 % If your work has multiple examiners, replace with
@@ -181,26 +181,26 @@
 % e.g. Examiners or Tarkastajat, and <name>s are
 % replaced by the examiner names, each on their
 % separate line.
-\examiner[Tarkastajat]{Prof. Proffa Proffanen}
+\examiner[Examiner]{Eetu Pulkkinen}
 
 % The finishing date of the thesis (YYYY-MM-DD).
-\finishdate{2020}{05}{18}
+\finishdate{2025}{12}{18}
 
 % The type of the thesis (e.g. Kandidaatintyö
 % or Master of Science Thesis) in the primary
 % and the secondary languages of the thesis.
-\thesistype{Opinnäytetyön taso}{Thesis type}
+\thesistype{Bachelor's Thesis}{Kandidaatin tutkielma}
 
 % The faculty and degree programme names in
 % the primary and the secondary languages of
 % the thesis.
-\facultyname{Tiedekunnan nimi}{Faculty Name}
-\programmename{Tutkinto-ohjelma}{Degree Programme}
+\facultyname{Faculty of Information Technology and Communication Sciences}{Informaatioteknologian ja viestinnän tiedekunta}
+\programmename{Bachelor’s Programme in Computing and Electrical Engineering}{Tieto- ja sähkötekniikan kandidaattiohjelma}
 
 % The keywords to the thesis in the primary and
 % the secondary languages of the thesis
 \keywords%
-    {avainsana, avainsana, avainsana, avainsana, avainsana}
+    {time series forecasting, foundational models, emergency department occupancy prediction} % muokkaa
     {keyword, keyword, keyword, keyword, keyword}
 
 \maketitle
@@ -217,9 +217,9 @@
 % first abstract. The second argument of
 % the \preface command takes the place where
 % the thesis was signed in.
-\abstract{tex/tiivistelma.tex}
-\otherabstract{tex/abstract.tex}
-\preface{tex/alkusanat.tex}{Tampereella}
+\abstract{tex/abstract.tex}
+\otherabstract{tex/tiivistelma.tex}
+% \preface{tex/alkusanat.tex}{Tampereella}
 
 %%%%% Table of contents.
 
@@ -249,20 +249,25 @@
 % They can be \input as shown below. Give both
 % the chapters and their files as descriptive
 % names as possible.
-\chapter{Johdanto}
-\label{ch:johdanto}
+\chapter{Introduction}
+\label{ch:introduction}
+\input{tex/introduction.tex}
 
-\input{tex/johdanto.tex}
+\chapter{Background}
+\label{ch: background}
+\input{tex/background.tex}
 
-\chapter{Esitystyyli}
-\label{ch:esitystyyli}
-\input{tex/esitystyyli.tex}
+\chapter{Methodology}
+\label{ch:methodology}
+\input{tex/methodology.tex}
 
-\chapter{Viittaustekniikat}
-\label{ch:viittaustekniikat}
-\input{tex/viittaustekniikat.tex}
+\chapter{Experiments}
+\label{ch:experiments}
+\input{tex/experiments.tex}
 
-% Add chapters similarly.
+\chapter{Discussion}
+\label{ch:discussion}
+\input{tex/discussion.tex}
 
 \chapter{Conclusion}
 \label{ch:conclusion}
