@@ -5,9 +5,16 @@ Accurate predictions of future ED occupancy levels could prevent crowding by all
 Current state of the art (SOTA) models for predicting ED occupancy are trained by using historical occupancy data and sometimes other factors, like weather and traffic data. (lähde)
 Training machine learning models is computationally heavy and time consuming task. Every hospital having unique characteristics, 
 model trained with data from one hospital could possibly not predict well future occupancy levels for other hospitals.
-Foundational models do not need training to predict from specific data. If they could predict ED occupancy accurately enough, hard part of model training can be skipped.
+Foundational models do not need training to predict from specific data. If they could predict ED occupancy accurately enough, hard part of model training can be skipped. 
+This could save substantial amount of computation and man hours.
 
-In this thesis foundational time series models are evaluated using ED occupancy data from . Performance of these models are compared to machine learning models that have been trained and validated on the same data. This allows direct comparison.
+In this thesis foundational time series models are evaluated using ED occupancy data from Acuta. Acuta is the name of Tampere university hospitals (TAYS) emergency department. TAYS is located in Tampere, Finland.
+Data used in this thesis is identical to the data Tuominen et al. \cite{tuominen_forecasting_2024} used in their study. Tuominen et al. created machine learning models to predict ED occupancy.
+Since the data is identical, direct comparison between foundational models and models from study by Tuominen et al. is possible. Foundational model performance can then be linked to other trained machine learning models.
+
+In this thesis foundational time series models are evaluated using ED occupancy data from Acuta. Acuta is the name of Tampere university hospitals (TAYS) emergency department. TAYS is located in Tampere, Finland. The data used is identical to that in a study by Tuominen et al. \cite{tuominen_forecasting_2024}. In their work, they created machine learning models to predict ED occupancy. This allows for a direct comparison between the foundational models and their results.
+
+In this thesis foundational time series models are evaluated using ED occupancy data from Acuta. Acuta is the name of Tampere university hospitals (TAYS) emergency department. TAYS is located in Tampere, Finland. The dataset is identical to the one used by Tuominen et al. \cite{tuominen_forecasting_2024} to train machine learning models for occupancy prediction. Because the data is the same, a direct performance comparison between foundational models and their models is possible.
 
 The goal of this thesis was to examine how well foundational time series models perform on emergency department occupancy prediction.
 
