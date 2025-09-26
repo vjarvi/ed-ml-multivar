@@ -1,9 +1,14 @@
-Overcrowding of hospital emergency departments is harmful to patients.(lähde)
+Overcrowding in hospital emergency departments (EDs) have a clear negative impact on patients health \cite{sartini_overcrowding_2022}. 
+For example, a higher mortality rate \cite{berg_associations_2019}\cite{jo_emergency_2014} and increased length of stay \cite{mccarthy_crowding_2009} have been associated with crowding. 
+Accurate predictions of future ED occupancy levels could prevent crowding by allocating resources differently.
 
-Emergence of foundational time series models raises questions about how well they perform on unseen data.
+Current state of the art (SOTA) models for predicting ED occupancy are trained by using historical occupancy data and sometimes other factors, like weather and traffic data. (lähde)
+Training machine learning models is computationally heavy and time consuming task. Every hospital having unique characteristics, 
+model trained with data from one hospital could possibly not predict well future occupancy levels for other hospitals.
+Foundational models do not need training to predict from specific data. If they could predict ED occupancy accurately enough, hard part of model training can be skipped.
 
 In this thesis foundational time series models are evaluated using ED occupancy data from . Performance of these models are compared to machine learning models that have been trained and validated on the same data. This allows direct comparison.
 
-The goal of this thesis was to examine how well foundational time series models perform on emergency department occupancy prediction. 
+The goal of this thesis was to examine how well foundational time series models perform on emergency department occupancy prediction.
 
 Five different foundational time series models were tested against trained machine learning models using same validation data. Different context lengths were tested. Giving multivariate data as a input was also tested.
