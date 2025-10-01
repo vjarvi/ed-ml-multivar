@@ -51,21 +51,28 @@ Transfer learning is a concept of transferring knowledge from one learned task t
 From vast training data, fundamental structures that are true for all tasks in one domain, are learned \cite{}. For example, ED occupancy and stock prices could have same kind of fluctuation.
 Transfer learning and the vast size of foundation models is what makes them work. \cite{bommasani2022opportunitiesrisksfoundationmodels}
 
-In \cite{bommasani2022opportunitiesrisksfoundationmodels}, the authors state three advancements that hav enabled the size of foundation models. First, improvement in computational hardware.
+In \cite{bommasani2022opportunitiesrisksfoundationmodels}, the authors state three advancements that have enabled the size of foundation models. First, improvement in computational hardware.
 Second, the Transformer architecture that efficiently utilized this hardware for training \cite{vaswani_attention_2017}. Third, access to larger datasets for training.
 
 \subsection{Paradigm shift}
 
 Deep learning is a subset of machine learning that uses deep neural networks to learn representations from data. The networks automatically extract features at different levels of abstraction. \cite{lecun2015deep}
 In \cite{Domingos2012Few} the author explains the key components of creating machine learning models. Deep learning uses this same approach \cite{lecun2015deep}.
-First step is choosing representation, or model
+First step is lähde  choosing representation, or model. In case of deep learning, this is done by choosing a model architecture.
+Then the model is optimized or trained to fit the data. Training is done by adjusting the model parameters to minimize a loss function.
+This step is computationally intensive and often requires massive datacenters and large amount of time \cite{}.
+The final step is evaluation, where the model's performance is measured using data not seen during training
+
+Foundation models represents a paradigm shift from this traditional approach. For a specific task, already trained foundation model can be used.
+Foundation model is often fine-tuned for a specific task. After fine tuning, the model is evaluated. \cite{bommasani2022opportunitiesrisksfoundationmodels}
+
+This approach saves a lot of computation, time and effort, since the model is already trained.
+In case of ED occupancy forecasting, every hospital has its own characteristics.
+Training a model for each hospital would be very time and computation consuming.
+Foundation models can be used to forecast ED occupancy for any hospital.
 
 
-Foundation models represents a paradigm shift from this traditional approach.
 
-- paradigm from traditional ml model training+validation -> foundational models
--In short, differs from traditional ml models in scale, generality, adaptation
--consequences: saves computation, time and effort, is generalizable
 
 \subsection{Model architecures}
 
