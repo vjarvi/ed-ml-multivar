@@ -1,41 +1,93 @@
-\section{Time series forecasting in healhcare}
+\section{ED forecasting}
 
-\subsection{Motivation}
+\subsection{ED crowding}
 
-- why is forecasting in heathcare important? (improve patient safety, resource allocation...)
+ED overcrowding does not have a single widely accepted definition. Different studies use different metrics, such as number of arrivals, clinician opinion of crowding or number of full rooms \cite{hwang2011measures}. 
+One verbal definition of overcrowding is "a situation in which demand for service exceeds the ability to provide care within a reasonable time, 
+causing physicians and nurses to be unable to provide quality care.” \cite{CanadianJournalEmergencyMedicine2001}. 
+
+Most widely used conceptual model is the input-throughput-output model. Input refers to factors related to patient arrivals and demand for ED services. Throughput includes actions inside ED. 
+Output refers to ED patient disposition \cite{asplin2003conceptual}.
+
+ED overcrowding has become a worldwide problem \cite{bernstein2009part1}. Its negative consequences are commonly divided into three categories. First, patients health is impacted negatively. 
+Higher mortality rate is clearly associated with crowding several days after hospital visit \cite{eidsto2024emergency,Guttmannd2983,richardson_increase_2006,berg_associations_2019,jo_emergency_2014}.
+Secondly, mistakes by hospital staff are more common \cite{KULSTAD2010304}(tarkista) and stress levels are higher for nurses and physicians \cite{bond_frequency_2007}.
+Thirdly, there is a system level disruption. Diverting ambulances to another ED \cite{asplin2003conceptual} delays patients access to care and disrupts coordination between hospitals.
+Patients' waiting time for treatment increases substantially \cite{mccarthy_crowding_2009}. Also, EDs cannot work as a safety net for mass casualty incidents and other patient surges while crowded \cite{bernstein2009part1}.
+
+\subsection{ED forecasting}
+
+Forecasting overcrowding enables proactive resource allocation to EDs. Accurate predictions can then prevent overcrowding and its harmful consequences.  There are different metrics that can be forecasted and have been linkde to overcrowding.
+Forecasting ED patient demand or patient admission are commonly used metrics. They contribute to input part of the input-throughput-output model. Forecasting of throughput, also called length of stay, is also used.
+It is the time patient spend in ED from arrival to leaving or moving to other department in the hospital. 
+More rarely ED crowding is defined by using some mathematical formula, such as ratio of total patients to total beds. \cite{gul2018exhaustive} 
+
+ED occupancy is also used as a forecasting metric.
+All patients from all ED treatment spaces are summed up to this metric. All parts of input-throughput-output model are affected in occupancy, which makes it useful. \cite{tuominen_forecasting_2024}
+
+In practice, forecasting relies on historical observations to learn recurring patterns like daily, weekly, and seasonal cycles, long-term trend, and short-term autocorrelation.
+Explanatory variables, such as weather, traffic, and hospital bed availability, can be used to improve accuracy and operational usefulness.
+Forecasts can be point estimates or full predictive distributions. \cite{tuominen_forecasting_2024}
 
 \subsection{ED time series data}
 
-- what is time series data
+A discrete-time time series is a set of discrete values $\{x_t\}$, where $t$ denotes a specific time \cite{brockwell_introduction_2016}. In this thesis, the term 'time series' refers always to discrete-time time series.
+The intervals between $t$ are usually fixed and of equal length.
 
-- how to forecasting is done (looking at historical data, capturing cyclical patterns)
+The word univariate is used to describe data that consists of a single attribute. For example, hourly occupancy data is univariable. Multivariable describes data that consists of multiple independent attributes.(lähde?)
+It can be denoted as $\{\mathbf{x}_{t}\}$, where $\mathbf{x}_t$ is a vector \cite{brockwell_introduction_2016}.
 
-- erityispiirteitä ED aikasarjadatasta. Mikä on occupancy, miksi sitä ennustetaan eikä arrivals, miten ED data käyttäytyy lyhyellä aikavälillä
+- erityispiirteitä ED aikasarjadatasta, miten ED data käyttäytyy lyhyellä aikavälillä?
 
-\section{Foundational models}
+\section{Foundation models}
 
-\subsection{Definiton}
+\subsection{Introduction}
 
-- what foundational models are (trained using massive amounts of data etc)
+A foundation models are an artificial intelligence (AI) systems that performs well at a wide range of diverse tasks. These models are trained on massive amounts of diverse data.
+Foundation models use deep neural network architectures with parameters ranging from hundreds of millions to hundreds of billions, depending on the application domain. \cite{bommasani2022opportunitiesrisksfoundationmodels}
+For example, foundation models have been developed for time series forecasting. A single foundation time series model can predict diverse time series data, from ED occupancy to stock prices.
 
-\subsection{Models}
+Transfer learning is a concept of transferring knowledge from one learned task to other tasks \cite{}.
+From vast training data, fundamental structures that are true for all tasks in one domain, are learned \cite{}. For example, ED occupancy and stock prices could have same kind of fluctuation.
+Transfer learning and the vast size of foundation models is what makes them work. \cite{bommasani2022opportunitiesrisksfoundationmodels}
 
--short and high level description of architectures and features of each model. naming of each model
-
--very short description of trained ml models that these models are compared against
+In \cite{bommasani2022opportunitiesrisksfoundationmodels}, the authors state three advancements that hav enabled the size of foundation models. First, improvement in computational hardware.
+Second, the Transformer architecture that efficiently utilized this hardware for training \cite{vaswani_attention_2017}. Third, access to larger datasets for training.
 
 \subsection{Paradigm shift}
 
-- paradigm from ml model training+validation -> foundational models (saves computation, time and effort, is generalizeble)
+Deep learning is a subset of machine learning that uses deep neural networks to learn representations from data. The networks automatically extract features at different levels of abstraction. \cite{lecun2015deep}
+In \cite{Domingos2012Few} the author explains the key components of creating machine learning models. Deep learning uses this same approach \cite{lecun2015deep}.
+First step is choosing representation, or model
+
+
+Foundation models represents a paradigm shift from this traditional approach.
+
+- paradigm from traditional ml model training+validation -> foundational models
+-In short, differs from traditional ml models in scale, generality, adaptation
+-consequences: saves computation, time and effort, is generalizable
+
+\subsection{Model architecures}
+
+-short and high level description of architectures and features of each model. naming of each model
+
+\cite{liu_sundial_2025} sundial
+\cite{ansari_chronos_2024} chronos
+\cite{auer_tirex_2025} tirex
+\cite{das_decoder-only_2024} timesfm
+\cite{woo_unified_2024} moirai
 
 \section{Related work}
 
 \subsection{Current state of the art in ED forecasting}
 
-- tietoa nykyisestä state of artista ED ennustuksessa
+- tietoa nykyisestä state of artista ED ennustuksessa: ARIMAX, TFT, lightGBM, seasonal Naive
+\cite{tuominen_forecasting_2024}
+\cite{koya2024temporal} TFT
 
 \subsection{Performance of foundational models in other fields}
 
 - Performance of foundational time series prediction for ED occ in other studies (if any)
 
-- Performance of foundational time series prediction for other data (find studies)
+- Performance of foundational time series prediction for other data (find studies) \cite{jin2024foundation}survey across all domains
+

@@ -1,8 +1,8 @@
-Overcrowding in hospital emergency departments (EDs) have a clear negative impact on patients health \cite{sartini_overcrowding_2022}. 
+Overcrowding in hospital emergency departments (EDs) have a clear negative impact on patients health \cite{sartini_overcrowding_2022}.
 For example, a higher mortality rate \cite{berg_associations_2019}\cite{jo_emergency_2014} and increased length of stay \cite{mccarthy_crowding_2009} have been associated with crowding. 
 Accurate predictions of future ED occupancy levels could prevent crowding by allocating resources differently.
 
-Current state of the art (SOTA) models for predicting ED occupancy are trained by using historical occupancy data and sometimes other external variables, like weather and traffic data. (lähde)
+Current state of the art (SOTA) machine learning models for ED occupancy prediction are trained by using historical occupancy data and sometimes other external variables, like weather and traffic data. (lähde)
 Training machine learning models is computationally heavy and time consuming task. Every hospital having unique characteristics, 
 model trained with data from one hospital could possibly not predict well future occupancy levels for other hospitals.
 Foundational models do not need training to predict from specific data. If they could predict ED occupancy accurately enough, hard part of model training can be skipped. 
@@ -10,12 +10,12 @@ This could save substantial amount of computation and man hours.
 
 In this thesis foundational time series models are evaluated using ED occupancy data from Acuta. Acuta is the Tampere university hospital's (TAYS) emergency department. 
 TAYS is located in Tampere, Finland. The data used is identical to that in a study by Tuominen et al. \cite{tuominen_forecasting_2024}.
-In their work, they created machine learning models to predict ED occupancy. This allows for a direct comparison between the performance of foundational models and their results.
+In their work, they created machine learning models to predict ED occupancy. This allows for a direct comparison between the performance of foundation models and their results.
 
 The goal of this thesis was to examine how well the foundational time series models perform on emergency department occupancy prediction. 
 In total five different models were chosen and tested. Each model was tested with multiple different input lenghts. 
 The models were also tested with two different types of input data. The first type uses only past ED occupancy data. This is called univariate input.
 The second type uses past ED occupancy data combined with external variables like weather and traffic data. This is called multivariate input.
 
-The thesis is structured as follows. In chapter 2, ED forecasting, foundational models and related research are introduced. 
+The thesis is structured as follows. In chapter 2, ED forecasting, foundation models and related research are introduced. 
 Chapter 3 covers the details of how the experiment was conducted. Results are presented in chapter 4. (Chapter 5 analyzes the results and chapter 6 concludes the thesis.)
