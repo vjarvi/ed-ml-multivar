@@ -1,33 +1,50 @@
 \section{Models}
 
-- criteria for choosing models
+The models for this study were selected based on three criteria: open-source availability, ease of use, and performance on the GIFT-Eval benchmark \cite{aksu2024giftevalbenchmarkgeneraltime}. 
+All chosen models have promising zero-shot capabilities, can be fine-tuned, and are available for download from GitHub.
 
--settings and hyper-parameters that were used for each model
+-settings and hyper-parameters that were used for each model (mean or median)
+-when and where downloaded
 
--very short description of trained ml models that these models are compared against
+-short description of baseline models
 
 \section{Data}
 
 -where the data came from
 
--describe the data used (univariate, multivariate...) and how it was processed
+-describe the data used (variables, time range,)
 
--data allows direct comparison with other ml models trained on the same data.
+- how it was processed
+
+- data split for fine tuning
 
 \section{Experimental setup}
 
--task is to predict 24h occupancy to the future
+-task is to predict 24h occupancy to the future (zero shot)
 
--uni vs multivariate inputs
+-details on different context length inputs, uni/multi
 
--different context length inputs
+-finetuning setup
 
--hardware setup and (library versions, date when models were downloaded?)
+-hardware setup and library versions
 
 \section{Evaluation}
 
--describe the evaluation metrics used (rmse, mae, msis), what they tell and why they are used
+In this thesis same metrics are used as in Tuominen et al. \cite{tuominen_forecasting_2024}, to enable direct comparison.
+They used mean absolute error (MAE) and root mean squared error (RMSE) for point forecasts.
 
-\section{Finetuning}
+MAE is defined as
+\begin{equation}
+\mathrm{MAE} = \frac{1}{n} \sum_{t=1}^{n} | y_t - \hat{y}_t | \, ,
+\end{equation}
+where $y_t$ is the ground truth value and $\hat{y}_t$ is the prediction made by the model. RMSE is defined as
+\begin{equation}
+\mathrm{RMSE} = \sqrt{ \frac{1}{n} \sum_{t=1}^{n} (y_t - \hat{y}_t)^2 } \, ,
+\end{equation}
+using the same notation.
 
--tämä osio jos finetunausta tehdään
+MAE measures forecast accuracy in the same units as the data and treats all errors equally \cite{hyndman2018forecasting}.
+This makes it easy to interpret. A MAE of 5 means forecasts are off by 5 patients on average.
+RMSE squares the errors before averaging, which gives more weight to larger errors \cite{hyndman2018forecasting}.
+This makes RMSE more sensitive to outliers and particularly useful when large errors are more harmful than small ones.
+In ED occupancy forecasting, this property is valuable because large prediction errors could lead to understaffing or overstaffing. This could cause crowding or wasted resources.
