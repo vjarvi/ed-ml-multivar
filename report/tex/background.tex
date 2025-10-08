@@ -31,12 +31,12 @@ To directly compare results with Tuominen et al., this thesis uses ED occupancy 
 All patients from all ED treatment spaces are summed up to this metric. All parts of input-throughput-output model are affected in occupancy, which makes it useful. \cite{tuominen_forecasting_2024}
 
 In practice, forecasting relies on historical observations to learn recurring patterns such as daily, weekly, and seasonal cycles, as well as long-term trends.
-Explanatory variables, such as weather, traffic, and hospital bed availability, can be used to improve accuracy.
+Explanatory variables, such as weather, traffic, and hospital bed availability can be used to improve accuracy.
 Forecasts can be point estimates or full predictive distributions. \cite{tuominen_forecasting_2024}
 
 \section{Time series forecasting}
 
-\subsection{Principless}
+\subsection{Principles}
 
 The goal of time series forecasting is to predict the future evolution of a data sequence based on its past values. External data sequences can be included for more accurate forecasts. \cite{hyndman2018forecasting}
 For example, future hourly ED occupancy can be predicted using past ED occupancy data, calendar information and weather.
@@ -63,7 +63,7 @@ and the present and past values of the covariates $\mathbf{x}_{t}, \mathbf{x}_{t
 The term $\epsilon_t$ is the random noise not explained by the model.
 The function $f$ can be a simple statistical model or a more complex machine learning model like a neural network. \cite{hyndman2018forecasting}
 
-Future is always unpredictable to some degree. Therefore predicting a whole probability distribution of future value is often useful. It is called forecast distribution.
+The future is always unpredictable to some degree. Therefore, predicting the entire probability distribution of a future value, rather than just a single value, is often useful. This is called a forecast distribution.
 Prediction intervals represents a range of values that future value could take given some probability. For example, a 90 \% prediction interval contains the actual value with 90 \% probability.
 In contrast, point forecast is a best single estimate of the future value. It is often mean or median of forecast distribution. \cite{hyndman2018forecasting}
 
