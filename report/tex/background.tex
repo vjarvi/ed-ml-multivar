@@ -1,110 +1,68 @@
-\section{Emergency department forecasting}
+\section{Emergency department}
 
-\subsection{Emergency department crowding}
+Tähän muutamalla lauseella päivystyksen määritelmä
 
-Emergency departments (EDs) serve a critical role in healthcare systems by providing immediate access to medical services \cite{sartini_overcrowding_2022}. 
-Worldwide, they function as a crucial 'safety net,' addressing acute health problems and responding to local and national disasters \cite{asplin2003conceptual,richardson_increase_2006}. 
-In the United States, over half of all inpatient hospital admissions originate from the ED \cite{asplin2003conceptual}.
+\subsection{Definition of crowding}
 
-ED overcrowding does not have a single widely accepted definition. Different studies use different metrics, such as number of arrivals, clinician opinion of crowding or number of full rooms \cite{hwang2011measures}. 
-One verbal definition of overcrowding is "a situation in which demand for service exceeds the ability to provide care within a reasonable time, 
-causing physicians and nurses to be unable to provide quality care.” \cite{CanadianJournalEmergencyMedicine2001}. 
+Emergency departments (EDs) serve a critical role in healthcare systems by providing immediate access to medical services \cite{sartini_overcrowding_2022}. Worldwide, they function as a crucial 'safety net,' addressing acute health problems and responding to local and national disasters \cite{asplin2003conceptual,richardson_increase_2006}. In the United States, more than half of all inpatient hospital admissions originate from the ED \cite{asplin2003conceptual}.
 
-Most widely used conceptual model is the input-throughput-output model. Input refers to factors related to patient arrivals and demand for ED services. Throughput includes actions inside ED. 
-Output refers to ED patient disposition \cite{asplin2003conceptual}.
+ED crowding does not have a single widely accepted definition. The proposed frameworks include NEDOCS or EDWIN but their utilization and practicality is uncertain. Regardless of the definition, crowding is always
 
-ED overcrowding has become a worldwide problem \cite{bernstein2009part1}. Its negative consequences are commonly divided into three categories. First, patients health is impacted negatively. 
-Higher mortality rate is clearly associated with crowding several days after hospital visit \cite{eidsto2024emergency,Guttmannd2983,richardson_increase_2006,berg_associations_2019,jo_emergency_2014}.
-Second, mistakes by hospital staff are more common \cite{KULSTAD2010304}(tarkista) and stress levels are higher for nurses and physicians \cite{bond_frequency_2007}.
-Third, there is a system level disruption. Diverting ambulances to another ED \cite{asplin2003conceptual} delays patients access to care and disrupts coordination between hospitals.
-Patients' waiting time for treatment increases substantially \cite{mccarthy_crowding_2009}. Also, EDs cannot work as a safety net for mass casualty incidents and other patient surges while crowded \cite{bernstein2009part1}.
+\begin{quote}
+    \emph{a situation in which demand for service exceeds the ability to provide care within a reasonable time, causing physicians and nurses to be unable to provide quality care}
+\end{quote}
+
+as was eloquently expressed by \citet{CanadianJournalEmergencyMedicine2001}.
+
+\subsection{Consequences of crowding}
+
+Regardless of the definition, crowding has become a worldwide public health issue \cite{bernstein2009part1}, the negative impacts of which can be divided into three broad categories based on their target: the patient, the staff, and the entire healthcare system. First, crowding has been repeatedly associated with increased mortality and increased number of medication errors \cite{KULSTAD2010304}(tarkista). Second, crowding has been shown to increase the stress levels of nurses and physicians \cite{bond_frequency_2007}. Third, crowding results in ambulance diversions diverting ambulances to another ED \cite{asplin2003conceptual}, which delays patient access to care and disrupts coordination between hospitals. In addition, crowding compromises the ability of the ED to respond to mass emergencies or at least their capability to provide quality care to less urgent patients \cite{bernstein2009part1}.
 
 \subsection{Emergency department forecasting}
 
-Forecasting overcrowding enables proactive resource allocation to EDs. Accurate predictions can then prevent overcrowding and its harmful consequences.  Different metrics can be forecasted and have been linked to overcrowding.
-These include ED patient demand, ED occupancy or patient admission. They contribute to input part of the input-throughput-output model. Forecasting of throughput, also called length of stay, is also used.
-It is the time patient spend in ED from arrival to leaving or moving to other department in the hospital. 
-More rarely ED crowding is defined by using some mathematical formula, such as ratio of total patients to total beds. \cite{gul2018exhaustive}
+Emergency department forecasting refers to the process of predicting future utilization of the ED. Accurate forecasting would enable proactive resource allocation that could ultimately prevent overcrowding along with its harmful consequences. In previous literature, the predictability of a wide set of target variables has been investigated. These include the number of patient arrivals, occupancy, patient admission, length of stay, or occupancy ratio.\cite{gul2018exhaustive}
 
-ED occupancy was used as a forecasting metric by Tuominen et al. \cite{tuominen_forecasting_2024}. 
-To directly compare results with Tuominen et al., this thesis uses ED occupancy as its crowding metric.
-All patients from all ED treatment spaces are summed up to this metric. All parts of input-throughput-output model are affected in occupancy, which makes it useful. \cite{tuominen_forecasting_2024}
+\textcolor{red}{Tähän kuuluu osio, jossa viitataan kunkin vastemuuttujan osalta tiettyyn juttuun (katso tuosta Gul et al). Sitten kerrotaan, että mitkä on kirjallisuuden puutteet. Lyhyimmillään: "The utilization of fondational models has previously only been reported by (viite}
 
-In practice, forecasting relies on historical observations to learn recurring patterns such as daily, weekly, and seasonal cycles, as well as long-term trends.
-Explanatory variables, such as weather, traffic, and hospital bed availability can be used to improve accuracy.
-Forecasts can be point estimates or full predictive distributions. \cite{tuominen_forecasting_2024}
+% In practice, forecasting relies on historical observations to learn recurring patterns such as daily, weekly, and seasonal cycles, as well as long-term trends. Explanatory variables, such as weather, traffic, and hospital bed availability can be used to improve accuracy. Forecasts can be point estimates or full predictive distributions. \cite{tuominen_forecasting_2024}
 
 \section{Time series forecasting}
 
-\subsection{Principles}
+The goal of time series forecasting is to predict the future evolution of a data sequence based on its past values. External data sequences can be included for more accurate forecasts. \cite{hyndman2018forecasting} For example, future hourly ED occupancy can be predicted using past ED occupancy data, calendar information, and weather.
 
-The goal of time series forecasting is to predict the future evolution of a data sequence based on its past values. External data sequences can be included for more accurate forecasts. \cite{hyndman2018forecasting}
-For example, future hourly ED occupancy can be predicted using past ED occupancy data, calendar information and weather.
+A discrete-time time series is a set of discrete values $\{x_t\}$, where $t$ denotes a specific time \cite{brockwell_introduction_2016}. In this thesis, the term 'time series' refers always to discrete-time time series. The intervals between $t$ are usually fixed and of equal length.
 
-A discrete-time time series is a set of discrete values $\{x_t\}$, where $t$ denotes a specific time \cite{brockwell_introduction_2016}. In this thesis, the term 'time series' refers always to discrete-time time series.
-The intervals between $t$ are usually fixed and of equal length.
+The term univariate refers to data that consists of a single attribute or variable. In contrast, multivariate data consists of multiple related variables observed over time, where the relationships between variables can provide additional information for forecasting. It can be denoted as $\{\mathbf{x}_{t}\}$, where $\mathbf{x}_t$ is a vector. \cite{brockwell_introduction_2016} Other variables than the one we predict are called covariates or exogenous inputs.
 
-The word univariate is used to describe data that consists of a single attribute. Multivariate data describes data that consists of multiple independent attributes.
-It can be denoted as $\{\mathbf{x}_{t}\}$, where $\mathbf{x}_t$ is a vector. \cite{brockwell_introduction_2016} Other variables than the one we are predicting are called covariates or exogenous inputs.
-
-For a data to be possible to forecast, it must contain patterns. The trend component represents the long-term direction or gradual change in the data, 
-which in ED occupancy data may reflect factors such as population growth.
-Seasonality means repeating patterns that occur at regular intervals. For example ED occupancy peaks daily between 16:00-19:00 and is at the lowest between 04:00-07:00 \cite{tuominen_forecasting_2024}.
-Random noise refers to the irregular and random fluctations that cannot be explained by any pattern. Afterall, many things such as accidents happen randomly.
-These and many other patterns including patterns from covariates make the forecasting possible. \cite{brockwell_introduction_2016}
+For a time series to be suitable for forecasting, it must exhibit identifiable patterns. The trend component represents the long-term direction or gradual change in the data, which, in the case of ED occupancy data, may reflect factors such as population growth. Seasonality means repeating patterns that occur at regular intervals. For example, ED occupancy peaks daily between 16:00-19:00 and is at its lowest between 04:00-07:00 \cite{tuominen_forecasting_2024}.
+Random noise refers to irregular and random fluctuations that cannot be explained by any pattern. After all, many things, such as accidents happen randomly. These and many other patterns, including patterns from covariates, make forecasting possible. \cite{brockwell_introduction_2016}
 
 A \emph{model} is a mathematical equation that describes the patterns found in the data. The objective is to find a model that effectively captures the underlying structure of the time series. 
 This relationship can be formally expressed with a general equation:
 \begin{equation}
 y_{t+1} = f(y_{t}, y_{t-1}, \dots, \mathbf{x}_{t+1}, \mathbf{x}_{t}, \dots) + \epsilon_{t+1}
 \end{equation}
-The function $f$ represents the model itself. It specifies the relationship between target variable $y_{t+1}$ and the target variable's past values $y_{t}, y_{t-1}, \dots$,
+The function $f$ represents the model itself. Specifies the relationship between the target variable $y_{t+1}$ and the past values of the target variable $y_{t}, y_{t-1}, \dots$,
 and the present and past values of the covariates $\mathbf{x}_{t}, \mathbf{x}_{t-1}, \dots$.
-The term $\epsilon_t$ is the random noise not explained by the model.
+The term $\epsilon_t$ is the random noise that is not explained by the model.
 The function $f$ can be a simple statistical model or a more complex machine learning model like a neural network. \cite{hyndman2018forecasting}
 
-The future is always unpredictable to some degree. Therefore, predicting the entire probability distribution of a future value, rather than just a single value, is often useful. This is called a forecast distribution.
-Prediction intervals represents a range of values that future value could take given some probability. For example, a 90 \% prediction interval contains the actual value with 90 \% probability.
-In contrast, point forecast is a best single estimate of the future value. It is often mean or median of forecast distribution. \cite{hyndman2018forecasting}
+The future is always unpredictable to some extent. Therefore, predicting the entire probability distribution of a future value, rather than just a single value, is often useful. This is called a forecast distribution.
+Prediction intervals represents a range of values that the future value could take given some probability. For example, a 90 \% prediction interval contains the actual value with 90 \% probability.
+In contrast, a point forecast represents the best single estimate of a future value. It is often the mean or median of the forecast distribution. \cite{hyndman2018forecasting}
 
-\subsection{Models for time series forecasting}
 
-Seasonal na\"ive forecasts future values by repeating the last observed value from the last seasonal period. For a time series \( y_t \) with seasonal period \( m \), the forecast for time \( t+h \) is:
-\begin{equation}
-\hat{y}_{t+h|t} = y_{t+h-m},
-\end{equation}
-where \( \hat{y}_{t+h|t} \) is the forecast at time \( t+h \), and \( y_{t+h-m} \) is the value from the prior seasonal cycle.
-For seasonality dominated data this is great baseline to compare other models against. \cite{hyndman2018forecasting}
-
-Autoregressive integrated moving average with exogenous inputs (ARIMAX) is a statistical model that combines linear regression and the ARIMA model. 
-The forecast for time \( t \) is given by:
-\begin{equation}
-y_t = \beta_0 + \beta_1 x_{1,t} + \cdots + \beta_k x_{k,t} + \eta_t,
-\end{equation}
-where \( x_{i,t} \) are the covariates, \( \beta_i \) are their coefficients, and \( \eta_t \) is the ARIMA error term.
-The term \( \eta_t \) uses correlation between\( y_t \) and its previous values \( y_i \). This dependence of previous values is called autocorrelation. \cite{hyndman2018forecasting}
-
-LightGBM is a highly efficient implementation of gradient boosting decision tree algorithm \cite{ke2017lightgbm}. Efficient implementation makes LightGBM effective for large-scale datasets.
-Temporal fusion transformer (TFT) is deep neural network architecture for time series forecasting with integrated interpretability \cite{lim2021temporal}.
-Tuominen et al. \cite{tuominen_forecasting_2024} used these two models to forecast ED occupancy. LightGBM achieved the best results.
 
 \section{Foundational models}
 
-\subsection{Introduction}
+\emph{Foundational models} are artificial intelligence (AI) systems that perform well in a wide range of diverse tasks. These models are trained on massive amounts of diverse data. Foundational models use deep neural network architectures with parameters ranging from hundreds of millions to hundreds of billions, depending on the application domain. \cite{bommasani2022opportunitiesrisksfoundationmodels} For example, foundation models have been developed for time series forecasting. A single foundation time series model can predict diverse time series data, from ED occupancy to stock prices.
 
-Machine learning models are traditionally trained for a specific purpose. For example, a model can be trained to forecast ED occupancy for one specific hospital.
-Advancements in computing have made it possible to train a larger model for multiple different purposes \cite{bommasani2022opportunitiesrisksfoundationmodels}. These are called foundational models.
+Foundational models differ from traditional machine learning models that  are trained for a specific purpose. For example, a model can be trained to forecast ED occupancy for one specific hospital. Advancements in computing have made it possible to train a larger model for multiple different purposes \cite{bommasani2022opportunitiesrisksfoundationmodels}. 
 
-\emph{Foundational models} are an artificial intelligence (AI) systems that performs well at a wide range of diverse tasks. These models are trained on massive amounts of diverse data.
-Foundational models use deep neural network architectures with parameters ranging from hundreds of millions to hundreds of billions, depending on the application domain. \cite{bommasani2022opportunitiesrisksfoundationmodels}
-For example, foundation models have been developed for time series forecasting. A single foundation time series model can predict diverse time series data, from ED occupancy to stock prices.
 
-Transfer learning is a concept of transferring knowledge from one learned task to other tasks \cite{Raffel2020T5}.
-From vast training data, fundamental structures that are true for all tasks in one domain, are learned \cite{Raffel2020T5}. For example, ED occupancy and stock prices could have same kind of daily fluctuation.
-Transfer learning and the vast size of foundation models is what makes them work \cite{bommasani2022opportunitiesrisksfoundationmodels}.
+Transfer learning is a concept of transferring knowledge from one learned task to other tasks \cite{Raffel2020T5}. From vast training data, fundamental structures that are true for all tasks in one domain, are learned \cite{Raffel2020T5}. For example, ED occupancy and stock prices could have same kind of daily fluctuation. Transfer learning and the vast size of foundation models is what makes them work \cite{bommasani2022opportunitiesrisksfoundationmodels}.
 
-In \cite{bommasani2022opportunitiesrisksfoundationmodels}, the authors state three advancements that have enabled the size of foundation models. First, improvement in computational hardware.
-Second, the Transformer architecture that efficiently utilized this hardware for training \cite{vaswani_attention_2017}. Third, access to larger datasets for training.
+In \cite{bommasani2022opportunitiesrisksfoundationmodels}, the authors state three advancements that have enabled the size of foundation models. First, improvement in computational hardware. Second, the Transformer architecture that efficiently utilized this hardware for training \cite{vaswani_attention_2017}. Third, access to larger datasets for training.
 
 \subsection{Pre-training and fine-tuning paradigm}
 
@@ -133,67 +91,4 @@ This section describes the foundational models selected for this study. The mode
 The \emph{context length} is the number of past time steps the model uses to make a prediction. The \emph{forecasting horizon} is the number of future time steps it predicts.
 All selected models have promising zero-shot capabilities and can be fine-tuned for specific tasks.
 
-\emph{Chronos} \cite{ansari_chronos_2024} is a family of foundational time series models developed by Amazon Science.
-It adopts a language modeling framework. This treats time series forecasting as a next-token prediction task.
-Based on the T5 transformer architecture \cite{Raffel2020T5}, Chronos processes continuous time series data by scaling and quantizing it into a fixed vocabulary of discrete bins.
-The model is trained using cross-entropy loss to predict the next token. This frames forecasting as a classification problem at each time step.
-To generate forecasts, the model predicts one token at a time. Each predicted token is used as input for predicting the next one.
-These discrete tokens are then dequantized and inverse-scaled to produce continuous forecast values.
-Multiple forecast paths are sampled to compute quantile and mean forecasts.
 
-The Chronos family includes four models with parameters ranging from 20 to 710 million.
-All variants have a maximum context length of 512 and a maximum forecasting horizon of 64.
-The training data was augmented using the TSMIXup and KernelSynth algorithms.
-TSMixup creates new time series by combining existing ones. KernelSynth generates synthetic data using Gaussian processes.
-As of September 2025, Chronos-bolt-base holds fourth place in GIFT-Eval for models with training data overlap to the test set \cite{GIFT-Eval_Leaderboard}.
-
-\emph{TimesFM}, developed by Google Research \cite{das_decoder-only_2024}, is a decoder-only transformer model.
-Its architecture consists of input layers, a transformer stack, and output layers.
-The model uses a technique called patching. Patching divides the input time series into fixed-length segments.
-The model processes these segments instead of individual time points.
-This reduces the number of steps required for long-horizon forecasting.
-Input patches are 32 time steps long. Output patches are 128 time steps long.
-The model is trained using Mean Squared Error (MSE) loss on point forecasts.
-
-The latest version, TimesFM 2.5, released in September 2025, has 200 million parameters and an extended context length of 16384.
-The models were pretrained on approximately 100 billion time points from diverse sources. These included Google Trends, Wikipedia pageview statistics, and public datasets such as M4 and Electricity.
-This data was augmented with synthetic data from ARMA processes.
-As of September 2025, TimesFM 2.5 holds third place on the GIFT-Eval leaderboard \cite{GIFT-Eval_Leaderboard}.
-
-\emph{Moirai}, developed by Salesforce AI Research \cite{woo_unified_2024}, is a versatile time series forecasting model.
-The version used in this thesis is Moirai 2.0. It was released on August 8, 2025 \cite{Salesforce_Moirai20}.
-Moirai uses a novel decoder-only transformer architecture designed for heterogeneous multivariate time series.
-Its key feature is using varying patch sizes based on data frequency. Higher-frequency data uses larger patches.
-Each patch is processed by a linear layer and assigned a time ID and a variable ID.
-These IDs inject positional information into the transformer through rotary embeddings and learnable scalars.
-The transformer's output patches are projected to produce parameters for a mixture of probability distributions.
-These parameters include the weights for combining the distributions into a final weighted sum.
-This sum forms the final probabilistic forecast.
-
-Moirai 2.0 has approximately 12.4 million parameters. This is 96\% smaller than the original Moirai Large model.
-Its architecture does not impose a hard limit on context length.
-Moirai 2.0 was trained on a combination of the GIFT-Eval dataset, synthetic data from KernelSynth and TSMIXup, and internal Salesforce data.
-As of September 2025, Moirai 2.0 holds the sixth place on the GIFT-Eval leaderboard \cite{GIFT-Eval_Leaderboard}.
-
-\emph{Sundial} is a family of models developed at Tsinghua University \cite{liu_sundial_2025}. It was released on February 2, 2025.
-It is the first foundational time series model to output probabilistic predictions directly. This is done by producing multiple forecast samples, where mean median and quantile forecasts are calculated.
-Sundial uses an encoder-only transformer architecture and works directly on continuous values.
-The model processes time series data in patches of size 16. It is trained using a novel TimeFlow Loss function.
-A key feature is its non-autoregressive prediction mechanism. It predicts multiple patches at once, enabling millisecond-fast inference.
-
-Sundial has a context length of 2880 but can handle shorter, arbitrary context lengths.
-The model was trained on TimeBench. This is a large-scale dataset created by the authors, which contains over a trillion data points from real-world sources like weather and finance.
-As of November 2025, Sundial holds the 10th place on the GIFT-Eval leaderboard \cite{GIFT-Eval_Leaderboard}. This demonstrates strong zero-shot forecasting capabilities.
-
-\emph{TiRex} was developed by NXAI GmbH in collaboration with academic researchers. It was released on May 29, 2025 \cite{auer_tirex_2025}.
-It is the only model in this thesis based on the xLSTM architecture rather than a transformer \cite{beck2024xlstm}.
-TiRex normalizes inputs using z-score normalization and processes data in patches of size 32.
-Input patches are projected into an embedding dimension by a residual block.
-This embedding is fed into the xLSTM.
-A second residual block projects the xLSTM output back into the patch dimension to produce forecasts.
-The outputs are scaled back to the original target space. The model predicts nine quantiles for each time step.
-
-TiRex has 35 million parameters, making it computationally efficient.
-Its xLSTM architecture propagates hidden states from patch to patch. This removes hard constraints on context length. A length of 2048 was used in the original paper.
-The model's training data comprises 47.5 million time series from Chronos's training data, synthetic data similar to KernelSynth, and parts of the GiftEval pre-training dataset.
-As of November 2025, TiRex holds second place on the GIFT-Eval leaderboard among models with training data overlap to the test set \cite{GIFT-Eval_Leaderboard}.
