@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llcc}
+\toprule
+\textbf{Model} & \textbf{FS} & \textbf{MAE} & \textbf{RMSE} \\
+\midrule
+\multicolumn{4}{l}{\textit{Foundational Models}} \\
+Chronos & U & 7.25 & 9.81 \\
+Moirai & U & 6.35 & 8.59 \\
+Moirai & A & 11.10 & 13.69 \\
+Sundial & U & 6.57 & 8.85 \\
+TiRex & U & 6.51 & 8.78 \\
+TimesFM & U & \underline{6.29} & \underline{8.45} \\
+\midrule
+\multicolumn{4}{l}{\textit{Baseline Models}} \\
+ARIMA & U & 7.78 & 10.50 \\
+LightGBM & U & 6.66 & 8.95 \\
+LightGBM & A & 6.63 & 8.77 \\
+SN & U & 9.53 & 12.58 \\
+TFT & U & 7.18 & 9.58 \\
+TFT & A & 6.86 & 9.04 \\
+\bottomrule
+\end{tabular}
+\caption{Best MAE and RMSE for each model, grouped by model type. FS denotes Feature Set, where U is univariable and A is all covariates.}
+\label{tab:main_result}
+\end{table}

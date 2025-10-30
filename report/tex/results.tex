@@ -2,15 +2,61 @@
 
 \section{Predictive performance}
 
-- show the charts and tables of the main results (rmse, mae)
+Table~\ref{tab:main_result}
+
+\input{../output/tables/main_result.tex}
 
 \section{Effect of context length}
 
-- charts that show error with different context lengths 
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{../output/plots/context_length_mae.pdf}
+        \caption{MAE for different context lengths}
+        \label{fig:horizon_mae-u}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{../output/plots/context_length_rmse.pdf}
+        \caption{RMSE for different context lengths}
+        \label{fig:horizon_rmse-u}
+    \end{subfigure}
+    \caption{MAE and RMSE for different context lengths. All models take univariate input.}
+    \label{fig:context_length_rmse}
+\end{figure}
 
-\section{Effect of covariates and fine tuning}
+\section{Effect of covariates}
 
-
--chart showing results from multivariate and fine tuned model
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.95\textwidth}
+        \includegraphics[width=\textwidth]{../output/plots/multivar_mae.pdf}
+        \caption{MAE for different subsets}
+        \label{fig:multivar_mae}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.95\textwidth}
+        \includegraphics[width=\textwidth]{../output/plots/multivar_rmse.pdf}
+        \caption{RMSE for different subsets}
+        \label{fig:multivar_rmse}
+    \end{subfigure}
+    \caption{Comparison of MAE and RMSE across different multivariate feature sets. The "All" category includes all covariates, while other groups represent specific covariate subsets. Different colors show results for different context lengths.}
+    \label{fig:multivar_bars}
+\end{figure}
 
 \section{Computational cost}
+
+Table~\ref{tab:latency_context} shows the computing time (latency) in seconds for each forecasting model across different context lengths. Table~\ref{tab:ram_context} presents the peak RAM usage in GiB for each model. Missing values indicate the model does not support that context length.
+
+\input{../output/tables/latency_by_context.tex}
+
+\input{../output/tables/ram_by_context.tex}
+
+Table~\ref{tab:latency_subset} shows the computing time (latency) in seconds for different feature subsets (covariates) using the Moirai model. Table~\ref{tab:ram_subset} presents the peak RAM usage in MiB for the same feature subsets. The ``All'' column represents using all covariates combined, while other columns show individual covariate features.
+
+\input{../output/tables/latency_by_subset.tex}
+
+\input{../output/tables/ram_by_subset.tex}
+
+Table~\ref{tab:multivar_cost}
+
+\input{../output/tables/comp_cost_multivar.tex}

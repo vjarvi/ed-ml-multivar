@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lllllll}
+\toprule
+\textbf{Context Length} &  \textbf{Chronos} &  \textbf{Moirai} &  \textbf{Sundial} &  \textbf{TiRex} &  \textbf{TimesFM} &  \textbf{Moirai (all)} \\
+\midrule
+24             & 1.5 & 6.5 & 173 & 104 & 48.2 & {---} \\
+96             & 2.4 & 5.2 & 162 & 107 & 63.9 & {---} \\
+168            & 4.0 & 5.6 & 170 & 91.8 & 65.6 & {---} \\
+336            & 6.7 & 5.8 & 169 & 92.9 & 68.8 & {---} \\
+512            & 9.5 & 7.2 & 172 & 94.0 & 70.8 & 110 \\
+720            & {---} & 12.3 & 189 & 91.5 & 73.9 & {---} \\
+2048           & {---} & 17.3 & 192 & 94.3 & 134 & {---} \\
+4096           & {---} & 20.6 & {---} & 103 & 197 & {---} \\
+8760           & {---} & 70.8 & {---} & 93.5 & 437 & {---} \\
+12840          & {---} & 94.6 & {---} & 98.5 & 635 & {---} \\
+\bottomrule
+\end{tabular}
+\caption{Computing time (latency) in seconds for each forecasting model across different context lengths. Latency represents the total time required to generate predictions for the entire test set spanning one year. Missing values indicate the model does not support that context length. Note that multivariate predictions were made on more powerful hardware.}
+\label{tab:latency_context}
+\end{table}

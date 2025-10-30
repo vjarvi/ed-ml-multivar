@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lllllll}
+\toprule
+\textbf{Context Length} &  \textbf{Chronos} &  \textbf{Moirai} &  \textbf{Sundial} &  \textbf{TiRex} &  \textbf{TimesFM} & \textbf{Moirai (all)} \\
+\midrule
+24             & 1.73 & 0.78 & 2.89 & 1.58 & 2.51 & {---} \\
+96             & 1.87 & 0.78 & 3.18 & 1.59 & 2.51 & {---} \\
+168            & 2.05 & 0.78 & 3.45 & 1.59 & 2.51 & {---} \\
+336            & 2.51 & 0.78 & 3.99 & 1.59 & 2.51 & {---} \\
+512            & 2.59 & 0.78 & 3.65 & 1.59 & 2.51 & 14.0 \\
+720            & {---} & 0.78 & 3.99 & 1.59 & 2.51 & {---} \\
+2048           & {---} & 0.78 & 6.79 & 1.59 & 2.51 & {---} \\
+4096           & {---} & 0.78 & {---} & 1.60 & 2.51 & {---} \\
+8760           & {---} & 0.78 & {---} & 1.62 & 2.51 & {---} \\
+12840          & {---} & 0.78 & {---} & 1.64 & 2.51 & {---} \\
+\bottomrule
+\end{tabular}
+\caption{Peak RAM usage in GiB for each forecasting model across different context lengths. Peak RAM represents the maximum memory consumed throughout the entire forecasting pipeline, including data preprocessing, model loading, and prediction generation. Missing values indicate that model does not support this length. Note that multivariate predictions from Moirai were done on different hardware.}
+\label{tab:ram_context}
+\end{table}
