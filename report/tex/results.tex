@@ -29,18 +29,9 @@ Table~\ref{tab:main_result}
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}[b]{0.95\textwidth}
-        \includegraphics[width=\textwidth]{../output/plots/multivar_mae.pdf}
-        \caption{MAE for different subsets}
-        \label{fig:multivar_mae}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.95\textwidth}
-        \includegraphics[width=\textwidth]{../output/plots/multivar_rmse.pdf}
-        \caption{RMSE for different subsets}
-        \label{fig:multivar_rmse}
-    \end{subfigure}
-    \caption{Comparison of MAE and RMSE across different multivariate feature sets. The "All" category includes all covariates, while other groups represent specific covariate subsets. Different colors show results for different context lengths.}
-    \label{fig:multivar_bars}
+    \includegraphics[width=0.95\textwidth]{../output/plots/multivar_mae.pdf}
+    \caption{MAE across different multivariate feature sets. The "All" category includes all covariates, while other groups represent specific covariate subsets. Different colors show results for different context lengths.}
+    \label{fig:multivar_mae}
 \end{figure}
 
 \section{Computational cost}
@@ -52,11 +43,3 @@ Table~\ref{tab:latency_context} shows the computing time (latency) in seconds fo
 \input{../output/tables/ram_by_context.tex}
 
 Table~\ref{tab:latency_subset} shows the computing time (latency) in seconds for different feature subsets (covariates) using the Moirai model. Table~\ref{tab:ram_subset} presents the peak RAM usage in MiB for the same feature subsets. The ``All'' column represents using all covariates combined, while other columns show individual covariate features.
-
-\input{../output/tables/latency_by_subset.tex}
-
-\input{../output/tables/ram_by_subset.tex}
-
-Table~\ref{tab:multivar_cost}
-
-\input{../output/tables/comp_cost_multivar.tex}
