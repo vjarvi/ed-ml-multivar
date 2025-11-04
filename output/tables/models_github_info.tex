@@ -1,0 +1,26 @@
+% You will need these packages in your preamble (before \begin{document})
+% \usepackage{booktabs}
+% \usepackage{hyperref} % Makes URLs clickable
+% \usepackage{tabularx}  % --- ADD THIS PACKAGE ---
+
+\begin{table}[hbt!]
+\centering
+% --- CHANGED tabular to tabularx and adjusted columns ---
+% The old 'l' for Repository is now 'X'
+% The total width is set to \textwidth
+\begin{tabularx}{\textwidth}{@{}llXlc@{}}
+\toprule
+\textbf{Model} & \textbf{Version Name} & \textbf{Reference} & \textbf{Repository} & \textbf{Version/Commit} \\
+\midrule
+% --- Start: Fill in your model details below ---
+Model 1 & chronos-bolt-base & \texttt{\textbackslash cite\{model1paper\}} & \url{github.com/user/model-1-long-name-that-needs-to-wrap} & \texttt{f4a9b2c} \\
+Model 2 & timesfm-2.5-200m-pytorch  & \texttt{\textbackslash cite\{model2paper\}} & \url{github.com/user/model-2} & \texttt{v1.2.0} \\
+Model 3 & moirai-2.0-R-small & \texttt{\textbackslash cite\{model3paper\}} & \url{github.com/time-series-foundation/lag-llama} & \texttt{a1b2c3d} \\
+Model 4 & TiRex & \texttt{\textbackslash cite\{model4paper\}} & \url{github.com/user/model-4} & \texttt{e5f6g7h} \\
+Model 5 & sundial-base-128m & \texttt{\textbackslash cite\{model5paper\}} & \url{github.com/user/model-5} & \texttt{v2.1-alpha} \\
+% --- End: Model details ---
+\bottomrule
+\end{tabularx}
+\caption{Open-source models evaluated in this study.}
+\label{tab:models}
+\end{table}

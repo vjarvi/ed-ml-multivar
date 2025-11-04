@@ -1,0 +1,24 @@
+\begin{table}[H]
+\centering
+\caption{Categories of External Covariates (adapted from Tuominen et al. \cite{tuominen_forecasting_2024})}
+\label{tab:covariates}
+
+% 1. Use \begin{tabularx}{\linewidth}{...} to make the table fit the page.
+% 2. Use {lX} for the columns:
+%    'l' = a standard, left-aligned column for the short category names.
+%    'X' = a special, auto-wrapping column for the long description.
+\begin{tabularx}{\linewidth}{lX} 
+\toprule
+% 3. Separate your headers with an ampersand (&)
+\textbf{Category} & \textbf{Description} \\
+\midrule
+Hospital beds & Hourly bed availability data from 24 healthcare facilities in the catchment area. \\
+Traffic & Hourly vehicle counts from 33 bidirectional observation stations in the Pirkanmaa region. \\
+Weather & Ten historical weather variables from the nearest meteorological observation station. \\
+Public events & A time series counting the number of daily public events organized in the Tampere area. \\
+Website visits & Website traffic for two hospital domains and Google search trend data for "Acuta". \\
+Calendar variables & Temporal features such as day of the week, month, national holidays, and holiday lags. \\
+Technical analysis & Features engineered from the target variable itself, such as moving averages. \\
+\bottomrule
+\end{tabularx}
+\end{table}

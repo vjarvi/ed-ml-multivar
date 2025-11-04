@@ -1,12 +1,18 @@
-\textcolor{red}{Otsikot tutkimuskysymysten mukaan}
+In this thesis, we establish x main findings regarding the utilization of FM models in predicting ED occupancy. Each of these along with their implications are discussed below.
 
 \section{Predictive performance}
 
-Table~\ref{tab:main_result}
+For each foundation model, the result from best performing context length setting was picked. For TimesFM, TiRex and Sundial it was the largest context length that was tested. For TimesFM and TiRex it was 12840 hours and for Sundial 2048 hours. Moirai got its best result for second largest context length that was 8760 hours or one year. For Chronos, best result came using context length of 336 hours or two weeks. Best result using external covariates come with context length of 1024.
+
+Table~\ref{tab:main_result} shows that all univariate models except Chronos moderately outperformed best baseline model, LightGBM. Univariate models benefited from the large context length. Reason for poor performance of Chronos could be explained by its context length limit of 512 timesteps. All the other models supported much larger context lengths, allowing them to use the long range dependencies of the data. TimesFM outperformed other foundation models.
 
 \input{../output/tables/main_result.tex}
 
 \section{Effect of context length}
+
+No significant differences in performance were observed between the FMs when using the same context length. Performance keeps getting better fairly consistently when context length is increased. However, performance gains begin to diminish at around context lengths beyond 2048 hours. Table~\ref{fig:context_length}
+
+In section~\ref{sec:models} content of training data for each model is introduced. Every models training data consist of massive amounts time series data. All the data is drawn from the same finite pool of public and well-known time series data. Fairly similar results could be explained by this overlap of model training data. A second possible explanation is that the models have captured all the patterns within the historical data. Remaining residual component consists of random noise.
 
 \begin{figure}[H]
     \centering
@@ -22,10 +28,14 @@ Table~\ref{tab:main_result}
         \label{fig:horizon_rmse-u}
     \end{subfigure}
     \caption{MAE and RMSE for different context lengths. All models take univariate input.}
-    \label{fig:context_length_rmse}
+    \label{fig:context_length}
 \end{figure}
 
 \section{Effect of covariates}
+
+Moirai was the only model tested in this thesis which supported external covariates. Table~\ref{fig:multivar_mae}shows that surprisingly Moirai could not improve its performance with external covariates. Its performance got a lot worse.
+
+This outcome suggest several possibilities. First, the chosen covariates may have been irrelevant and mostly random noise with no real correlation with the target variable. Second, the model inherently does not support covariates like this. Third, there could be a bug.
 
 \begin{figure}[H]
     \centering
@@ -36,10 +46,15 @@ Table~\ref{tab:main_result}
 
 \section{Computational cost}
 
+
 Table~\ref{tab:latency_context} shows the computing time (latency) in seconds for each forecasting model across different context lengths. Table~\ref{tab:ram_context} presents the peak RAM usage in GiB for each model. Missing values indicate the model does not support that context length.
+
+Table~\ref{tab:ram_context} shows that Moirai is the most memory efficient model. Table~\ref{tab:latency_context} shows that for small context lengths Chronos is the fastest model and for larger context lengths TiRex and Moirai are the fastest.
 
 \input{../output/tables/latency_by_context.tex}
 
 \input{../output/tables/ram_by_context.tex}
 
-Table~\ref{tab:latency_subset} shows the computing time (latency) in seconds for different feature subsets (covariates) using the Moirai model. Table~\ref{tab:ram_subset} presents the peak RAM usage in MiB for the same feature subsets. The ``All'' column represents using all covariates combined, while other columns show individual covariate features.
+\section{Limitations}
+
+-only one dataset

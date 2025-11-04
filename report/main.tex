@@ -101,6 +101,7 @@
 
 \usepackage{float}     % for [H] placement
 \usepackage{booktabs}  % for \toprule, \midrule, \bottomrule
+\usepackage{tabularx}
 \usepackage[final]{microtype} % better line breaking and protrusion
 \emergencystretch=1em % modest stretch to avoid tiny overfull hboxes
 
@@ -110,7 +111,7 @@
 % \usepackage[version=4]{mhchem}
 
 % Text hyperlinking
-% \usepackage{hyperref}
+\usepackage{hyperref}
 % \hypersetup{hidelinks}
 
 % (SI) unit handling
@@ -264,13 +265,9 @@
 \label{ch:methodology}
 \input{tex/methodology.tex}
 
-\chapter{Results}
+\chapter{Results and Discussion}
 \label{ch:results}
 \input{tex/results.tex}
-
-\chapter{Discussion}
-\label{ch:discussion}
-\input{tex/discussion.tex}
 
 \chapter{Conclusion}
 \label{ch:conclusion}

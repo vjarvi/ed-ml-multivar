@@ -1,6 +1,16 @@
-ED occupancy was used as a forecasting metric by Tuominen et al. \cite{tuominen_forecasting_2024}. To directly compare results with Tuominen et al., this thesis uses ED occupancy as its crowding metric. All patients from all ED treatment spaces are summed up to this metric. All parts of input-throughput-output model are affected in occupancy, which makes it useful. \cite{tuominen_forecasting_2024}
+This section details the experiments used to evaluate whether foundation time series models are (good) for forecasting ED occupancy. A direct comparison with the baseline models from Tuominen et al. \cite{tuominen_forecasting_2024} requires the use of identical data and evaluation metrics.
+
+First, the ED occupancy dataset and external covariates are described. Second, the experimental setup for 24-hour zero-shot forecasting task and different context lengths and external covariate setups are described. Used hardware and measurements for computational costs are also introduced. Third, the evaluation metrics are defined. Finally, all five foundation models and four benchmark models are described.
 
 \section{Data}
+
+ED occupancy was used as a forecasting metric by Tuominen et al. \cite{tuominen_forecasting_2024}. To directly compare results with Tuominen et al., this thesis uses ED occupancy as its crowding metric. All patients from all ED treatment spaces are summed up to this metric. All parts of the input-throughput-output model are affected in occupancy, which makes it useful. \cite{tuominen_forecasting_2024}
+
+The ED occupancy data used in this thesis comes from Tampere University Hospital's (TAYS) electronic health record. TAYS is an academic, Level 1 trauma center in Tampere, Finland. When the study by Tuominen et al. \cite{tuominen_forecasting_2024} was done, TAYS served a primary population of 535,000 within the Pirkanmaa Hospital District and provided tertiary care for a total catchment population of 900,700. The hospital's combined emergency department (ED), Acuta, managed an annual census of approximately 100,000 patients at that time. The ED had a total capacity of 111–118 patients, which included 70 beds (plus 7 reserve) and 41 seats for ambulatory patients. \cite{tuominen_forecasting_2024}
+
+The ED occupancy data spans from January 1, 2017, to June 19, 2019. It consists of hourly registered ED visits. As by Tuominen et al. \cite{tuominen_forecasting_2024}, a whole year of occupancy data from June 20, 2018, to June 19, 2019, was used as a testing dataset in this thesis. Tuominen et al. also used a total of 167 external covariates. All of the covariate categories are described in table~\ref{tab:covariates}. Covariates can be divided into categories of past and future covariates. Future covariates include data points for the time steps for which the forecasts are made. For example, weather forecasts and public events can be used as future covariates. \cite{tuominen_forecasting_2024}
+
+\input{output/tables/covariate_categories}
 
 -where the data came from
 
@@ -8,21 +18,27 @@ ED occupancy was used as a forecasting metric by Tuominen et al. \cite{tuominen_
 
 - how it was processed
 
-- data split for fine tuning
-
 \section{Experimental setup}
+
+Models task is to predict the next 24 hours of hourly occupancy data. For a one year testing dataset, this means 365 predictions. All of the predictions are grouped together and compared against the ground truth values from testing dataset. These results are then directly compared with results from Tuominen et al. \cite{tuominen_forecasting_2024}.
+
+To evaluate univariate model performances across different historical window sizes, a set ten different context lengths were tested. These were grouped into temporal and fixed-token windows. The temporal contexts included calendar based intervals of 1 day, 3 days, 1 week, 2 weeks, 4 weeks, and 1 year. The maximum available window size from January 1, 2017 to June 19, 2018 spanned a total of 12840 hours or 535 days, was also included. To fill the gaps in between these window sizes, fixed-length windows of 512, 1024 and 2048 hours were also evaluated.
+
+To test which kind of external covariates foundation models can leverage, the covariates were divided into subsets according to their categories. To enable a direct comparison with Tuominen et al. \cite{tuominen_forecasting_2024}, one forecasting was also performed with all covariates grouped together. Adding all the covariates dramatically increases the input dimensionality. This, in turn, rapidly scales the computational load especially with longer context lengths. This is why only context lengths 256, 512 and 1024 hours were tested.
+
+Univariate forecasts were performed on a local workstation equipped with an Intel Core i5-8600K (6-core @ 4.3 GHz) CPU and 16 GB of DDR4 RAM. Multivariate forecasts were computed on the CSC Puhti supercomputer \cite{}. These experiments were run on a GPU node with one 20-core Intel Xeon Gold 6230 CPU, and one NVIDIA Volta V100 GPU with 32 GB of VRAM.(tarkista tarkemmat tiedot)
+
+For evaluation computational requirements of each foundation model, time needed to make forecasts and peak RAM during inference were measured. Time it takes to generate forecasts is called \emph{inference time}. Inference time was measured for the whole test set spanning one year. Peak RAM usage is measured over the whole inference run, including loading the model to the computer memory.
 
 -task is to predict 24h occupancy to the future (zero shot)
 
 -details on different context length inputs, uni/multi
 
--finetuning setup
-
 -hardware setup and library versions
 
 \section{Evaluation}
 
-In this thesis same metrics are used as in Tuominen et al. \cite{tuominen_forecasting_2024}, to enable direct comparison.
+In this thesis same metrics are used as in Tuominen et al. \cite{tuominen_forecasting_2024}.
 They used mean absolute error (MAE) and root mean squared error (RMSE) for point forecasts.
 
 MAE is defined as
@@ -37,22 +53,27 @@ using the same notation.
 
 MAE measures forecast accuracy in the same units as the data and treats all errors equally \cite{hyndman2018forecasting}.
 This makes it easy to interpret. A MAE of 5 means forecasts are off by 5 patients on average.
+
 RMSE squares the errors before averaging, which gives more weight to larger errors \cite{hyndman2018forecasting}.
 This makes RMSE more sensitive to outliers and particularly useful when large errors are more harmful than small ones.
 In ED occupancy forecasting, this property is valuable because large prediction errors could lead to understaffing or overstaffing. This could cause crowding or wasted resources.
 
-
 \section{Models}
+\label{sec:models}
 
 The models for this study were selected based on three criteria: open-source availability, ease of use, and performance on the GIFT-Eval benchmark \cite{aksu2024giftevalbenchmarkgeneraltime}. 
-All chosen models have promising zero-shot capabilities, can be fine-tuned, and are available for download from GitHub.
+All chosen models have promising zero-shot capabilities and are available for download from GitHub. Models were downloaded from GitHub on September 2025. Exact version of the cloned repository and model version name on Table~\ref{tab:models}. Median predictions were chosen over mean predictions for forecasts.
 
 -settings and hyper-parameters that were used for each model (mean or median)
 -when and where downloaded
 
+-exact version name for each
+
 -short description of baseline models
 
-\subsection{Chronos} \cite{ansari_chronos_2024} is a family of foundational time series models developed by Amazon Science.
+\subsection{Chronos} 
+
+\emph{Chronos} \cite{ansari_chronos_2024} is a family of foundational time series models developed by Amazon Science.
 It adopts a language modeling framework. This treats time series forecasting as a next-token prediction task.
 Based on the T5 transformer architecture \cite{Raffel2020T5}, Chronos processes continuous time series data by scaling and quantizing it into a fixed vocabulary of discrete bins.
 The model is trained using cross-entropy loss to predict the next token. This frames forecasting as a classification problem at each time step.
@@ -64,9 +85,11 @@ The Chronos family includes four models with parameters ranging from 20 to 710 m
 All variants have a maximum context length of 512 and a maximum forecasting horizon of 64.
 The training data was augmented using the TSMIXup and KernelSynth algorithms.
 TSMixup creates new time series by combining existing ones. KernelSynth generates synthetic data using Gaussian processes.
-As of September 2025, Chronos-bolt-base holds fourth place in GIFT-Eval for models with training data overlap to the test set \cite{GIFT-Eval_Leaderboard}.
+As of September 2025, Exact version used called \emph{chronos-bolt-base}, holds fourth place in GIFT-Eval for models with training data overlap to the test set \cite{GIFT-Eval_Leaderboard}.
 
-\subsection{TimesFM}, developed by Google Research \cite{das_decoder-only_2024}, is a decoder-only transformer model.
+\subsection{TimesFM}
+
+\emph{TimesFM}, developed by Google Research \cite{das_decoder-only_2024}, is a decoder-only transformer model.
 Its architecture consists of input layers, a transformer stack, and output layers.
 The model uses a technique called patching. Patching divides the input time series into fixed-length segments.
 The model processes these segments instead of individual time points.
@@ -74,13 +97,15 @@ This reduces the number of steps required for long-horizon forecasting.
 Input patches are 32 time steps long. Output patches are 128 time steps long.
 The model is trained using Mean Squared Error (MSE) loss on point forecasts.
 
-The latest version, TimesFM 2.5, released in September 2025, has 200 million parameters and an extended context length of 16384.
-The models were pretrained on approximately 100 billion time points from diverse sources. These included Google Trends, Wikipedia pageview statistics, and public datasets such as M4 and Electricity.
+The latest version, TimesFM 2.5 that was used in this thesis was released in September 2025. It has 200 million parameters and context length of 16384.
+The model was pretrained on approximately 100 billion time points from diverse sources. These included Google Trends, Wikipedia(wikimedia)? pageview statistics, and public datasets such as M4 and Electricity.
 This data was augmented with synthetic data from ARMA processes.
 As of September 2025, TimesFM 2.5 holds third place on the GIFT-Eval leaderboard \cite{GIFT-Eval_Leaderboard}.
 
-\subsection{Moirai}, developed by Salesforce AI Research \cite{woo_unified_2024}, is a versatile time series forecasting model.
-The version used in this thesis is Moirai 2.0. It was released on August 8, 2025 \cite{Salesforce_Moirai20}.
+\subsection{Moirai}
+
+\emph{Moirai}, developed by Salesforce AI Research \cite{woo_unified_2024}, is a versatile time series forecasting model.
+The version used in this thesis is Moirai 2.0 small. It was released on August 8, 2025 \cite{Salesforce_Moirai20}.
 Moirai uses a novel decoder-only transformer architecture designed for heterogeneous multivariate time series.
 Its key feature is using varying patch sizes based on data frequency. Higher-frequency data uses larger patches.
 Each patch is processed by a linear layer and assigned a time ID and a variable ID.
@@ -89,18 +114,20 @@ The transformer's output patches are projected to produce parameters for a mixtu
 These parameters include the weights for combining the distributions into a final weighted sum.
 This sum forms the final probabilistic forecast.
 
-Moirai 2.0 has approximately 12.4 million parameters. This is 96\% smaller than the original Moirai Large model.
+Version of Moirai that was used has approximately 12.4 million parameters. This is 96\% smaller than the original Moirai Large model.
 Its architecture does not impose a hard limit on context length.
-Moirai 2.0 was trained on a combination of the GIFT-Eval dataset, synthetic data from KernelSynth and TSMIXup, and internal Salesforce data.
-As of September 2025, Moirai 2.0 holds the sixth place on the GIFT-Eval leaderboard \cite{GIFT-Eval_Leaderboard}.
+It was trained on a combination of the GIFT-Eval dataset, synthetic data from KernelSynth and TSMIXup, and internal Salesforce data.
+As of September 2025, Moirai 2.0 small holds the sixth place on the GIFT-Eval leaderboard \cite{GIFT-Eval_Leaderboard}.
 
-\subsection{Sundial} is a family of models developed at Tsinghua University \cite{liu_sundial_2025}. It was released on February 2, 2025.
+\subsection{Sundial}
+
+\emph{Sundial} is a family of models developed at Tsinghua University \cite{liu_sundial_2025}. It was released on February 2, 2025.
 It is the first foundational time series model to output probabilistic predictions directly. This is done by producing multiple forecast samples, where mean median and quantile forecasts are calculated.
 Sundial uses an encoder-only transformer architecture and works directly on continuous values.
 The model processes time series data in patches of size 16. It is trained using a novel TimeFlow Loss function.
 A key feature is its non-autoregressive prediction mechanism. It predicts multiple patches at once, enabling millisecond-fast inference.
 
-Sundial has a context length of 2880 but can handle shorter, arbitrary context lengths.
+Version of the Sundial that was used has a context length of 2880 but can handle shorter, arbitrary context lengths.
 The model was trained on TimeBench. This is a large-scale dataset created by the authors, which contains over a trillion data points from real-world sources like weather and finance.
 As of November 2025, Sundial holds the 10th place on the GIFT-Eval leaderboard \cite{GIFT-Eval_Leaderboard}. This demonstrates strong zero-shot forecasting capabilities.
 
@@ -119,26 +146,14 @@ Its xLSTM architecture propagates hidden states from patch to patch. This remove
 The model's training data comprises 47.5 million time series from Chronos's training data, synthetic data similar to KernelSynth, and parts of the GiftEval pre-training dataset.
 As of November 2025, TiRex holds second place on the GIFT-Eval leaderboard among models with training data overlap to the test set \cite{GIFT-Eval_Leaderboard}.
 
+\input{output/tables/models_github_info}
 
 \subsection{Benchmark models}
 
-\textcolor{red}{Näitä ei tarvitse avata edes tällä tarkkuudella, koska sitten pitäisi avata kaikki, TFT, DeepAR, N-Beats ja ne. Voi vaan listata esim. jokainen omassa paragraphissa tai peräti listassa. Kts. Tuominen2023 referenssiksi.}
+The Seasonal Naïve (SNaïve) model provides a baseline forecast by repeating the last observed value from the previous seasonal period. For a time series with a daily pattern, the forecast for a future time is simply the value observed at the same time one seasonal cycle ago (e.g., 24 hours prior). This approach is a standard benchmark for strongly seasonal data \cite{hyndman2018forecasting}.
 
-Seasonal na\"ive forecasts future values by repeating the last observed value from the last seasonal period. For a time series \( y_t \) with seasonal period \( m \), the forecast for time \( t+h \) is:
-\begin{equation}
-\hat{y}_{t+h|t} = y_{t+h-m},
-\end{equation}
-where \( \hat{y}_{t+h|t} \) is the forecast at time \( t+h \), and \( y_{t+h-m} \) is the value from the prior seasonal cycle.
-For seasonality dominated data this is great baseline to compare other models against. \cite{hyndman2018forecasting}
+ARIMAX (Autoregressive Integrated Moving Average with eXogenous inputs) is a statistical model that extends the standard ARIMA method. It combines ARIMA, which models the time series's own autocorrelation structure, with a linear regression component. This regression component allows the model to incorporate the predictive information from external, or exogenous, variables \cite{hyndman2018forecasting}.
 
-Autoregressive integrated moving average with exogenous inputs (ARIMAX) is a statistical model that combines linear regression and the ARIMA model. 
-The forecast for time \( t \) is given by:
-\begin{equation}
-y_t = \beta_0 + \beta_1 x_{1,t} + \cdots + \beta_k x_{k,t} + \eta_t,
-\end{equation}
-where \( x_{i,t} \) are the covariates, \( \beta_i \) are their coefficients, and \( \eta_t \) is the ARIMA error term.
-The term \( \eta_t \) uses correlation between\( y_t \) and its previous values \( y_i \). This dependence of previous values is called autocorrelation. \cite{hyndman2018forecasting}
+LightGBM (Light Gradient Boosting Machine) is a machine learning algorithm based on gradient boosting decision trees \cite{ke2017lightgbm}. It is recognized for its high efficiency and scalability, which makes it particularly effective for large-scale datasets. Tuominen et al. \cite{tuominen_forecasting_2024} applied LightGBM in their study forecasting ED occupancy, where it achieved the strongest performance among the models evaluated.
 
-LightGBM is a highly efficient implementation of gradient boosting decision tree algorithm \cite{ke2017lightgbm}. Efficient implementation makes LightGBM effective for large-scale datasets.
-Temporal fusion transformer (TFT) is deep neural network architecture for time series forecasting with integrated interpretability \cite{lim2021temporal}.
-Tuominen et al. \cite{tuominen_forecasting_2024} used these two models to forecast ED occupancy. LightGBM achieved the best results.
+The Temporal Fusion Transformer (TFT) is a deep neural network architecture designed specifically for multi-horizon time series forecasting \cite{lim2021temporal}. It utilizes an attention-based encoder-decoder structure to learn complex temporal relationships at different scales. A key feature of TFT is its integrated interpretability, which allows for identifying significant past time steps and important features. This model was also benchmarked in the ED occupancy forecasting study by Tuominen et al. \cite{tuominen_forecasting_2024}.
