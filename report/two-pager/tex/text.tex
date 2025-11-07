@@ -1,0 +1,37 @@
+\section*{Aikasarjaennustaminen}
+
+Aikasarjaennustamisen tavoitteena on ennustaa datajonon tulevaa kehitystä sen menneiden arvojen perusteella. Ulkoisia datajonoja voidaan sisällyttää tarkempien ennusteiden saamiseksi. \cite{hyndman2018forecasting} Esimerkiksi tässä työssä käsiteltävää päivystyksen tulevaa tuntikohtaista kuormitusta voidaan ennustaa käyttämällä menneitä kuormitustietoja, kalenteritietoja ja säätietoja.
+
+Diskreettiaikainen aikasarja on joukko diskreettejä arvoja $\{x_t\}$, missä $t$ tarkoittaa tiettyä ajanhetkeä. Aikavälit $t$:n arvojen välillä ovat yleensä kiinteitä ja samanpituisia. Termi yksimuuttuja (eng. univariate) viittaa dataan, joka koostuu yhdestä piirteestä tai muuttujasta. Sitä vastoin termi monimuuttuja (eng. multivariate) viittaa dataan, joka koostuu useista toisiinsa liittyvistä muuttujista. Näiden muuttujien väliset suhteet voivat tarjota lisätietoa ennustamiseen. Monimuuttujien joukkoa voidaan merkitä muodossa $\{\mathbf{x}_{t}\}$, missä $\mathbf{x}_t$ on vektori. Muita muuttujia kuin ennustettavaa muuttujaa kutsutaan kovariaateiksi tai eksogeenisiksi syötteiksi. \cite{brockwell_introduction_2016}
+
+Jotta aikasarjasta voidaan ennustaa tulevaisuuden arvoja, siinä on oltava tunnistettavissa olevia kuvioita. Trendikomponentti edustaa datan pitkän aikavälin suuntaa tai asteittaista muutosta, mikä päivystyskuormitusdatan tapauksessa voi heijastaa esimerkiksi väestönkasvua. Kausivaihtelu tarkoittaa säännöllisin väliajoin toistuvia kuvioita. Esimerkiksi päivystyksen kuormitus on huipussaan päivittäin klo 16:00–19:00 ja alimmillaan klo 04:00–07:00 \cite{tuominen_forecasting_2024}. Satunnaiskohina viittaa epäsäännöllisiin ja satunnaisiin vaihteluihin, joita ei voida selittää millään kuviolla. Loppujen lopuksi monet asiat, kuten onnettomuudet, tapahtuvat sattumanvaraisesti. Nämä ja monet muut kuviot, mukaan lukien kovariaattien kuviot, tekevät ennustamisesta mahdollista. \cite{brockwell_introduction_2016}
+
+Matemaattista yhtälöä, joka kuvaa datasta löytyviä kuvioita kutsutaan \emph{Malliksi}. Tavoitteena on löytää malli, joka kuvaa tehokkaasti aikasarjan perusrakennetta. Tämä suhde voidaan ilmaista muodollisesti yleisellä yhtälöllä:
+\begin{equation}
+y_{t+1} = f(y_{t}, y_{t-1}, \dots, \mathbf{x}_{t+1}, \mathbf{x}_{t}, \dots) + \epsilon_{t+1}
+\end{equation}
+Funktio $f$ edustaa itse mallia. Se määrittelee suhteen kohdemuuttujan $y_{t+1}$ ja kohdemuuttujan menneiden arvojen $y_{t}, y_{t-1}, \dots$ sekä kovariaattien $\mathbf{x}_{t}, \mathbf{x}_{t-1}, \dots$ nykyisten ja menneiden arvojen välillä. Termi $\epsilon_t$ on satunnaiskohinaa, jota malli ei kykene selittämään. Malli $f$ voi olla yksinkertainen tilastollinen malli tai monimutkaisempi koneoppimismalli, kuten neuroverkko. \cite{hyndman2018forecasting}
+
+Tulevaisuus on aina jossain määrin arvaamaton. Siksi pelkän yksittäisen arvon ennustamisen sijaan on usein hyödyllistä ennustaa tulevan arvon koko todennäköisyysjakauma. Tätä kutsutaan ennustejakaumaksi. Ennustevälit edustavat arvoaluetta, jonka sisällä tuleva arvo tietyllä todennäköisyydellä on. Esimerkiksi 90 \%:n ennusteväli sisältää todellisen arvon 90 \%:n todennäköisyydellä. Sitä vastoin piste-ennuste edustaa parasta yksittäistä arviota tulevasta arvosta. Se on usein ennustejakauman keskiarvo tai mediaani. \cite{hyndman2018forecasting}
+
+\section*{Perustamallit}
+
+\emph{Perustamallit} ovat tekoälyjärjestelmiä, jotka kykenevät suorittamaan hyvin useita erilaisia tehtäviä. Nämä mallit koulutetaan massiivisilla ja monipuolisilla data-aineistoilla. Perustamallit käyttävät syviä neuroverkkoarkkitehtuureja, joiden parametrien määrä vaihtelee sadoista miljoonista satoihin miljardeihin sovellusalueesta riippuen. \cite{bommasani2022opportunitiesrisksfoundationmodels} Esimerkiksi aikasarjojen ennustamiseen on kehitetty perustamalleja, ja yksi perustamalli voi ennustaa monenlaisia aikasarjoja päivystyksen kuormituksesta osakekursseihin.
+
+Perustamallit eroavat perinteisistä koneoppimismalleista, jotka koulutetaan yhtä tiettyä tehtävää varten. Perinteinen koneoppimismalli voidaan esimerkiksi kouluttaa ennustamaan vain yhden tietyn sairaalan päivystyskuormitusta. Laskentatehon kehitys on mahdollistanut suurempien mallien kouluttamisen useita eri tarkoituksia varten. \cite{bommasani2022opportunitiesrisksfoundationmodels}
+
+Siirto-oppiminen on koneoppimiseen liittyvä käsite, jossa yhdessä opitusta tehtävästä siirretään tietoa muihin tehtäviin \cite{Raffel2020T5}. Laajoista koulutusaineistoista opitaan perustavanlaatuisia rakenteita, jotka pätevät kaikkiin saman alan tehtäviin \cite{Raffel2020T5}. Esimerkiksi päivystyksen kuormituksella ja osakekursseilla voi olla samankaltainen päivittäinen vaihtelu. Siirto-oppiminen ja perustamallien valtava koko ovat avain niiden toimivuuteen \cite{bommasani2022opportunitiesrisksfoundationmodels}.
+
+Julkaisussa \cite{bommasani2022opportunitiesrisksfoundationmodels} kirjoittajat nimeävät kolme edistysaskelta, jotka ovat mahdollistaneet perustamallien koon kasvun: laskentalaitteistojen kehitys, Transformer-arkkitehtuuri, joka hyödyntää tehokkaasti tätä laitteistoa koulutuksessa \cite{vaswani_attention_2017}, sekä laajempien data-aineistojen saatavuus.
+
+\subsection*{Mallien koulutus ja soveltaminen}
+
+Syväoppiminen on koneoppimisen osa-alue, joka käyttää syviä neuroverkkoja datasta oppimiseen. Nämä verkot oppivat datan esitysmuotoja useilla tasoilla \cite{lecun2015deep}. Syväoppiminen on useimpien nykyaikaisten tekoälymallien taustalla.
+
+Julkaisussa \cite{Domingos2012Few} kirjoittaja esittää kolme keskeistä näkökohtaa koneoppimismallien kehittämisessä. Ensimmäinen vaihe on esitysmuodon eli mallin valinta. Syväoppimisen tapauksessa tämä tehdään valitsemalla mallin arkkitehtuuri. Sitten malli optimoidaan eli koulutetaan sovittumaan dataan. Koulutus tapahtuu säätämällä mallin parametreja häviöfunktion minimoimiseksi. Tämä vaihe on laskennallisesti raskas ja vaatii usein massiivisia datakeskuksia ja merkittävästi aikaa. \cite{bommasani2022opportunitiesrisksfoundationmodels} Viimeinen vaihe on arviointi, jossa mallin suorituskyky mitataan datalla, jota ei ole nähty koulutuksen aikana. Syväoppiminen noudattaa tätä viitekehystä \cite{lecun2015deep}.
+
+Perustamallit käyttävät erilaista viitekehystä ja edustavat paradigman muutosta perinteiseen koneoppimisen viitekehykseen. Tiettyä tehtävää varten voidaan valita jo esikoulutettu perustamalli. Perustamalli hienosäädetään usein tiettyä tehtävää varten. Viimeinen perustamallien viitekehyksen vaihe on mallin arviointi. \cite{bommasani2022opportunitiesrisksfoundationmodels}
+
+Tämä lähestymistapa säästää merkittävästi laskentaa, aikaa ja vaivaa, koska perustamalli on jo esikoulutettu. Se madaltaa kynnystä käyttää edistyneitä tekoälymalleja. Päivystyskuormituksen ennustamisessa jokaisella sairaalalla on omat erityispiirteensä. Siksi yhden sairaalan malli toimisi huonosti toisissa sairaaloissa. Erillisen mallin kouluttaminen jokaiselle sairaalalle olisi kallista. Perustamallit voivat ratkaista tämän ongelman.
+
+

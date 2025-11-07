@@ -10,7 +10,7 @@ The ED occupancy data used in this thesis comes from Tampere University Hospital
 
 The ED occupancy data spans from January 1, 2017, to June 19, 2019. It consists of hourly registered ED visits. As by Tuominen et al. \cite{tuominen_forecasting_2024}, a whole year of occupancy data from June 20, 2018, to June 19, 2019, was used as a testing dataset in this thesis. Tuominen et al. also used a total of 167 external covariates. All of the covariate categories are described in table~\ref{tab:covariates}. Covariates can be divided into categories of past and future covariates. Future covariates include data points for the time steps for which the forecasts are made. For example, weather forecasts and public events can be used as future covariates. \cite{tuominen_forecasting_2024}
 
-\input{output/tables/covariate_categories}
+\input{../output/tables/covariate_categories.tex}
 
 -where the data came from
 
@@ -146,7 +146,7 @@ Its xLSTM architecture propagates hidden states from patch to patch. This remove
 The model's training data comprises 47.5 million time series from Chronos's training data, synthetic data similar to KernelSynth, and parts of the GiftEval pre-training dataset.
 As of November 2025, TiRex holds second place on the GIFT-Eval leaderboard among models with training data overlap to the test set \cite{GIFT-Eval_Leaderboard}.
 
-\input{output/tables/models_github_info}
+\input{../output/tables/models_github_info.tex}
 
 \subsection{Benchmark models}
 
