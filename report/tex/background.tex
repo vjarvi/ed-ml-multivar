@@ -1,8 +1,10 @@
+(TARKISTA) This chapter provides the background for forecasting emergency department (ED) crowding. We first outline the role of EDs and clarify what crowding means and why it matters. We then introduce forecasting in the ED context and review core time series concepts used in this work. Finally, we present foundational time series models, explain the pre-training and fine-tuning paradigm, and describe the specific models evaluated in this study.
+
 \section{Emergency department}
 
-Tähän muutamalla lauseella päivystyksen määritelmä
+EDs deliver medical care to patients at any time with a wide range of acute conditions and injuries. \cite{gul2018exhaustive}. They rapidly assess and treat urgent conditions. Swift diagnostic evaluation and timely medical or surgical interventions are provided for patients requiring immediate care \cite{sartini_overcrowding_2022}.
 
-\subsection{Definition of crowding}
+\subsection{Definition and consequences of crowding}
 
 Emergency departments (EDs) serve a critical role in healthcare systems by providing immediate access to medical services \cite{sartini_overcrowding_2022}. Worldwide, they function as a crucial 'safety net,' addressing acute health problems and responding to local and national disasters \cite{asplin2003conceptual,richardson_increase_2006}. In the United States, more than half of all inpatient hospital admissions originate from the ED \cite{asplin2003conceptual}.
 
@@ -14,9 +16,7 @@ ED crowding does not have a single widely accepted definition. The proposed fram
 
 as was eloquently expressed by \cite{CanadianJournalEmergencyMedicine2001}.
 
-\subsection{Consequences of crowding}
-
-Regardless of the definition, crowding has become a worldwide public health issue \cite{bernstein2009part1}, the negative impacts of which can be divided into three broad categories based on their target: the patient, the staff, and the entire healthcare system. First, crowding has been repeatedly associated with increased mortality and increased number of medication errors \cite{KULSTAD2010304}(tarkista). Second, crowding has been shown to increase the stress levels of nurses and physicians \cite{bond_frequency_2007}. Third, crowding results in ambulance diversions diverting ambulances to another ED \cite{asplin2003conceptual}, which delays patient access to care and disrupts coordination between hospitals. In addition, crowding compromises the ability of the ED to respond to mass emergencies or at least their capability to provide quality care to less urgent patients \cite{bernstein2009part1}.
+Regardless of the definition, crowding has become a worldwide public health issue (lähde), the negative impacts of which can be divided into three broad categories based on their target: the patient, the staff, and the entire healthcare system. First, crowding has been repeatedly associated with increased mortality and increased number of medication errors \cite{KULSTAD2010304}(tarkista). Second, crowding has been shown to increase the stress levels of nurses and physicians \cite{bond_frequency_2007}. Third, crowding results in ambulance diversions diverting ambulances to another ED \cite{asplin2003conceptual}, which delays patient access to care and disrupts coordination between hospitals. In addition, crowding compromises the ability of the ED to respond to mass emergencies or at least their capability to provide quality care to less urgent patients (lähde).
 
 \subsection{Emergency department forecasting}
 
