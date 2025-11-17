@@ -61,11 +61,14 @@ In ED occupancy forecasting, this property is valuable because large prediction 
 \section{Models}
 \label{sec:models}
 
-The models for this study were selected based on three criteria: open-source availability, ease of use, and performance on the GIFT-Eval benchmark \cite{aksu2024giftevalbenchmarkgeneraltime}. 
-All chosen models have promising zero-shot capabilities and are available for download from GitHub. Models were downloaded from GitHub on September 2025. Exact version of the cloned repository and model version name on Table~\ref{tab:models}. Median predictions were chosen over mean predictions for forecasts.
+This section describes the FMs selected for this study. The models are compared using their architecture and key forecasting parameters.
+The \emph{context length} is the number of past time steps the model uses to make a prediction. The \emph{forecasting horizon} is the number of future time steps it predicts.
+All selected models have promising zero-shot capabilities, meaning they can be used to make forecasts without any additional training.
 
--settings and hyper-parameters that were used for each model (mean or median)
--when and where downloaded
+The FMs were selected based on three criteria: open-source availability, ease of use, and performance on the GIFT-Eval benchmark \cite{aksu2024giftevalbenchmarkgeneraltime}. 
+All chosen models have promising zero-shot capabilities and are available for download from GitHub. The models were downloaded from GitHub on September 2025. Exact version of the cloned repository and model version name on Table~\ref{tab:models}. Median predictions were chosen over mean predictions for forecasts.
+
+-settings and hyper-parameters that were used for each model
 
 -exact version name for each
 
