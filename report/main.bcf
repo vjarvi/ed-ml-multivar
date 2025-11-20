@@ -96,15 +96,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>99</bcf:value>
+      <bcf:value>6</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
-      <bcf:value>2</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>99</bcf:value>
+      <bcf:value>6</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -116,15 +116,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minbibnames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>mincitenames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minsortnames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minitems</bcf:key>
@@ -168,7 +168,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortlocale</bcf:key>
-      <bcf:value>fin</bcf:value>
+      <bcf:value>english</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
@@ -184,7 +184,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>init</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -331,15 +331,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>99</bcf:value>
+      <bcf:value>6</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
-      <bcf:value>2</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>99</bcf:value>
+      <bcf:value>6</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -351,15 +351,15 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minbibnames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>mincitenames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minsortnames</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>3</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>minitems</bcf:key>
@@ -399,7 +399,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>init</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -642,6 +642,8 @@
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
     <bcf:option datatype="boolean">subentry</bcf:option>
+    <bcf:option datatype="boolean">dashed</bcf:option>
+    <bcf:option datatype="boolean">subentrycomp</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
     <bcf:option datatype="integer">minxrefs</bcf:option>
@@ -724,6 +726,7 @@
     <bcf:option datatype="boolean">eprint</bcf:option>
     <bcf:option datatype="boolean">related</bcf:option>
     <bcf:option datatype="boolean">subentry</bcf:option>
+    <bcf:option datatype="boolean">subentrycomp</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="xml">labelalphatemplate</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
@@ -812,6 +815,7 @@
     <bcf:option datatype="boolean" backendout="1">eprint</bcf:option>
     <bcf:option datatype="boolean" backendout="1">related</bcf:option>
     <bcf:option datatype="boolean" backendout="1">subentry</bcf:option>
+    <bcf:option datatype="boolean" backendout="1">subentrycomp</bcf:option>
     <bcf:option datatype="boolean" backendout="1">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer" backendin="maxcitenames,maxbibnames,maxsortnames">maxnames</bcf:option>
     <bcf:option datatype="integer" backendin="mincitenames,minbibnames,minsortnames">minnames</bcf:option>
@@ -2377,65 +2381,88 @@
     <bcf:citekey order="12" intorder="1">asplin2003conceptual</bcf:citekey>
     <bcf:citekey order="12" intorder="2">richardson_increase_2006</bcf:citekey>
     <bcf:citekey order="13" intorder="1">asplin2003conceptual</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">CanadianJournalEmergencyMedicine2001</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">KULSTAD2010304</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">bond_frequency_2007</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">asplin2003conceptual</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">gul2018exhaustive</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">hyndman2018forecasting</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">brockwell_introduction_2016</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">brockwell_introduction_2016</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">tuominen_forecasting_2024</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">brockwell_introduction_2016</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">hyndman2018forecasting</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">hyndman2018forecasting</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">bommasani2022opportunitiesrisksfoundationmodels</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">bommasani2022opportunitiesrisksfoundationmodels</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">Raffel2020T5</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">Raffel2020T5</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">bommasani2022opportunitiesrisksfoundationmodels</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">bommasani2022opportunitiesrisksfoundationmodels</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">vaswani_attention_2017</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">lecun2015deep</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">lim2021temporal</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">Domingos2012Few</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">bommasani2022opportunitiesrisksfoundationmodels</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">lecun2015deep</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">bommasani2022opportunitiesrisksfoundationmodels</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">tuominen_forecasting_2024</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">tuominen_forecasting_2024</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">tuominen_forecasting_2024</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">tuominen_forecasting_2024</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">tuominen_forecasting_2024</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">tuominen_forecasting_2024</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">tuominen_forecasting_2024</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">tuominen_forecasting_2024</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">sartini_overcrowding_2022</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">CanadianJournalEmergencyMedicine2001</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">sartini_overcrowding_2022</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">berg_associations_2019</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">KULSTAD2010304</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">bond_frequency_2007</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">asplin2003conceptual</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Bernstein2009</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">gul2018exhaustive</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">gul2018exhaustive</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">zibners2006local</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">GOLMOHAMMADI2016535</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">gul2015forecasting</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">brockwell_introduction_2016</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">james2021introduction</bcf:citekey>
+    <bcf:citekey order="29" intorder="2">gul2018exhaustive</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">saravanan2025shorttermloadforecasting</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">arab2025benchmarkingtimeseriesforecasting</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">hyndman2018forecasting</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">brockwell_introduction_2016</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">brockwell_introduction_2016</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">brockwell_introduction_2016</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">hyndman2018forecasting</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">hyndman2018forecasting</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">bommasani2022opportunitiesrisksfoundationmodels</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">bommasani2022opportunitiesrisksfoundationmodels</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">Raffel2020T5</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">Raffel2020T5</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">bommasani2022opportunitiesrisksfoundationmodels</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">bommasani2022opportunitiesrisksfoundationmodels</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">vaswani_attention_2017</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">lecun2015deep</bcf:citekey>
     <bcf:citekey order="48" intorder="1">tuominen_forecasting_2024</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">tuominen_forecasting_2024</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">tuominen_forecasting_2024</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">hyndman2018forecasting</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">hyndman2018forecasting</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">aksu2024giftevalbenchmarkgeneraltime</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">ansari_chronos_2024</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">Raffel2020T5</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">GIFT-Eval_Leaderboard</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">das_decoder-only_2024</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">GIFT-Eval_Leaderboard</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">woo_unified_2024</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">Salesforce_Moirai20</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">GIFT-Eval_Leaderboard</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">liu_sundial_2025</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">GIFT-Eval_Leaderboard</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">auer_tirex_2025</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">beck2024xlstm</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">GIFT-Eval_Leaderboard</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">lim2021temporal</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">Domingos2012Few</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">bommasani2022opportunitiesrisksfoundationmodels</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">lecun2015deep</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">bommasani2022opportunitiesrisksfoundationmodels</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">tuominen_forecasting_2024</bcf:citekey>
     <bcf:citekey order="67" intorder="1">hyndman2018forecasting</bcf:citekey>
     <bcf:citekey order="68" intorder="1">hyndman2018forecasting</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">ke2017lightgbm</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">tuominen_forecasting_2024</bcf:citekey>
-    <bcf:citekey order="71" intorder="1">lim2021temporal</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">aksu2024giftevalbenchmarkgeneraltime</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">das_decoder-only_2024</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">GIFT-Eval_Leaderboard</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">ansari_chronos_2024</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">Raffel2020T5</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">amazon_chronos_bolt_base</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">ansari2025chronos2</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">ansari_chronos_2024</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">GIFT-Eval_Leaderboard</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">liu_sundial_2025</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">GIFT-Eval_Leaderboard</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">woo_unified_2024</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">Salesforce_Moirai20</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">GIFT-Eval_Leaderboard</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">auer_tirex_2025</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">beck2024xlstm</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">GIFT-Eval_Leaderboard</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">hyndman2018forecasting</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">hyndman2018forecasting</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">tuominen_forecasting_2024</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">ke2017lightgbm</bcf:citekey>
+    <bcf:citekey order="91" intorder="1">lim2021temporal</bcf:citekey>
+    <bcf:citekey order="92" intorder="1">amazon_chronos_bolt_base</bcf:citekey>
+    <bcf:citekey order="93" intorder="1">shchur2025moirai2accuracy</bcf:citekey>
+    <bcf:citekey order="94" intorder="1">amazon_chronos_bolt_base</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

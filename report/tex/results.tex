@@ -1,18 +1,20 @@
-In this thesis, we establish x main findings regarding the utilization of FM models in predicting ED occupancy. Each of these along with their implications are discussed below.
+In this thesis, we establish four main findings about applying foundational models to emergency department occupancy forecasting. (1) Modern univariate FMs surpass a tuned gradient boosting baseline when they have long enough context length.
+(2) Increasing context length keeps improving accuracy, but the rate of improvement slows down with larger context lengths. (3) The multivariate covariates available for this study did not help the only FM that could consume them.
+(4) Lastly, Moirai delivers the best performance if computational costs are taken into account. The following sections elaborate on each finding.
 
 \section{Predictive performance}
 
-For each foundation model, the result from best performing context length setting was picked. For TimesFM, TiRex and Sundial it was the largest context length that was tested. For TimesFM and TiRex it was 12840 hours and for Sundial 2048 hours. Moirai got its best result for second largest context length that was 8760 hours or one year. For Chronos, best result came using context length of 336 hours or two weeks. Best result using external covariates come with context length of 1024.
+For each foundation model, the result from best performing context length setting was picked. For TimesFM, TiRex and Sundial it was the largest context length that was tested. For TimesFM and TiRex it was 12,840 hours and for Sundial 2048 hours. Moirai got its best result for second largest context length that was 8760 hours or one year. For Chronos, best result came using context length of 2048 hours. Best result using external covariates came with context length of 1024 but remained inferior to worst performing baseline model.
 
-Table~\ref{tab:main_result} shows that all univariate models except Chronos moderately outperformed best baseline model, LightGBM. Univariate models benefited from the large context length. Reason for poor performance of Chronos could be explained by its context length limit of 512 timesteps. All the other models supported much larger context lengths, allowing them to use the long range dependencies of the data. TimesFM outperformed other foundation models.
+Table~\ref{tab:main_result} shows that all univariate models except Chronos moderately outperformed best baseline model, LightGBM. Univariate models benefited from the large context length. Reason for poor performance of Chronos could be explained by it being the oldest model.~\cite{amazon_chronos_bolt_base} TimesFM outperformed other foundation models.
 
 \input{../output/tables/main_result.tex}
 
 \section{Effect of context length}
 
-No significant differences in performance were observed between the FMs when using the same context length. Performance keeps getting better fairly consistently when context length is increased. However, performance gains begin to diminish at around context lengths beyond 2048 hours. Table~\ref{fig:context_length}
+Excluding Chronos, no significant differences in performance were observed between the FMs when using the same context length. Performance improves consistently when context length is increased. However, performance gains begin to diminish at context lengths beyond 2048 hours, as shown in Figure~\ref{fig:context_length}.
 
-In section~\ref{sec:models} content of training data for each model is introduced. Every models training data consist of massive amounts time series data. All the data is drawn from the same finite pool of public and well-known time series data. Fairly similar results could be explained by this overlap of model training data. A second possible explanation is that the models have captured all the patterns within the historical data. Remaining residual component consists of random noise.
+In Section~\ref{sec:models}, the content of training data for each model is introduced. Each model's training data consist of massive amounts of time series data, with substantial overlap in their use of public and well-known time series datasets. The fairly similar results could be explained by this overlap in model training data. A second possible explanation is that the models have captured all the patterns within the historical data, and the remaining residual component consists of random noise.
 
 \begin{figure}[H]
     \centering
@@ -33,9 +35,15 @@ In section~\ref{sec:models} content of training data for each model is introduce
 
 \section{Effect of covariates}
 
-Moirai was the only model tested in this thesis which supported external covariates. Table~\ref{fig:multivar_mae}shows that surprisingly Moirai could not improve its performance with external covariates. Its performance got a lot worse.
+Moirai was the only model tested in this thesis which supported external covariates. Table~\ref{fig:multivar_mae} shows that surprisingly Moirai could not improve its performance with external covariates. Its performance deteriorated significantly.
 
-This outcome suggest several possibilities. First, the chosen covariates may have been irrelevant and mostly random noise with no real correlation with the target variable. Second, the model inherently does not support covariates like this. Third, there could be a bug.
+This outcome suggested an anomaly. After investigation, a GitHub discussion ~\cite{shchur2025moirai2accuracy} from Moirai's repository was found complaining about the same issue. A repository contributor stated that
+
+\begin{quote}
+    \emph{current moirai2 is pre-trained with univariate data, and it does not learn any cross-variate patterns \dots}
+\end{quote}
+
+This directly explains why this model version could not use external covariates, even though there is an option to give this model external covariates as input.
 
 \begin{figure}[H]
     \centering
@@ -57,4 +65,4 @@ Table~\ref{tab:ram_context} shows that Moirai is the most memory efficient model
 
 \section{Limitations}
 
--only one dataset
+The evaluation covers a single Finnish emergency department and one year of testing data, so the conclusions may not transfer directly to other hospitals with different arrival patterns or operational practices. Hardware configurations differed between the univariate and multivariate Moirai experiments, which complicates precise cost comparisons. Finally, only one FM (Moirai) currently accepts the available covariates. The Moirai model was also not trained with exogenous covariates. These aspects limit the generalization of the negative covariate result.

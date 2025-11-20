@@ -9,13 +9,13 @@
 168            & 2.05 & 3.45 & 1.59 & 2.51 & 0.78 & {---} \\
 336            & 2.51 & 3.99 & 1.59 & 2.51 & 0.78 & {---} \\
 512            & 2.59 & 3.65 & 1.59 & 2.51 & 0.78 & 14.0 \\
-720            & {---} & 3.99 & 1.59 & 2.51 & 0.78 & {---} \\
-2048           & {---} & 6.79 & 1.59 & 2.51 & 0.78 & {---} \\
+720            & 5.50 & 3.99 & 1.59 & 2.51 & 0.78 & {---} \\
+2048           & 5.48 & 6.79 & 1.59 & 2.51 & 0.78 & {---} \\
 4096           & {---} & {---} & 1.60 & 2.51 & 0.78 & {---} \\
 8760           & {---} & {---} & 1.62 & 2.51 & 0.78 & {---} \\
 12840          & {---} & {---} & 1.64 & 2.51 & 0.78 & {---} \\
 \bottomrule
 \end{tabular}
-\caption{Peak RAM usage in GiB for each forecasting model across different context lengths. Peak RAM represents the maximum memory consumed throughout the entire forecasting pipeline, including data preprocessing, model loading, and prediction generation. Missing values indicate that model does not support this length. Note that multivariate predictions from Moirai were done on different hardware.}
+\caption{Peak RAM usage in GiB for each forecasting model across different context lengths. Peak RAM represents the maximum memory consumed throughout the entire forecasting pipeline, including data preprocessing, model loading, and prediction generation. "all" represent predictions made with all 167 covariates. Missing values indicate that model does not support this length. Note that multivariate predictions from Moirai were done on more powerful hardware.}
 \label{tab:ram_context}
 \end{table}

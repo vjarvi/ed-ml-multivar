@@ -1,91 +1,90 @@
-This chapter provides the background for forecasting ED crowding. We first outline the role of EDs and clarify what crowding means and why it matters. We then introduce forecasting in the ED context and review core time series concepts used in this work. Finally, we present foundational time series models. We explain how they differ from traditional machine learning models in terms of training and deployment for specific application.
+This chapter provides the background for forecasting ED crowding. We first outline the role of EDs and clarify what crowding means and why it matters. We then introduce forecasting in the ED context and review core time series concepts used in this work. Finally, we present foundational time series models and explain how they differ from traditional machine learning models in terms of training and deployment for specific applications.
 
 \section{Emergency department}
 
-EDs deliver medical care to patients at any time with a wide range of acute conditions and injuries. \cite{gul2018exhaustive}. They rapidly assess and treat urgent conditions. Swift diagnostic evaluation and timely medical or surgical interventions are provided for patients requiring immediate care \cite{sartini_overcrowding_2022}.
+EDs deliver medical care to patients at any time with a wide range of acute conditions and injuries ~\cite{gul2018exhaustive}. Swift diagnostic evaluation and timely medical or surgical interventions are provided for patients requiring immediate care ~\cite{sartini_overcrowding_2022}.
 
 \subsection{Definition and consequences of crowding}
 
-Emergency departments (EDs) serve a critical role in healthcare systems by providing immediate access to medical services \cite{sartini_overcrowding_2022}. Worldwide, they function as a crucial 'safety net,' addressing acute health problems and responding to local and national disasters \cite{asplin2003conceptual,richardson_increase_2006}. In the United States, more than half of all inpatient hospital admissions originate from the ED \cite{asplin2003conceptual}.
+Emergency departments (EDs) serve a critical role in healthcare systems by providing immediate access to medical services ~\cite{sartini_overcrowding_2022}. Worldwide, they function as a crucial 'safety net,' addressing acute health problems and responding to local and national disasters ~\cite{asplin2003conceptual,richardson_increase_2006}. In the United States, more than half of all inpatient hospital admissions originate from the ED ~\cite{asplin2003conceptual}.
 
-ED crowding does not have a single widely accepted definition. The proposed frameworks include NEDOCS or EDWIN but their utilization and practicality is uncertain. Regardless of the definition, crowding is always
+ED crowding does not have a single widely accepted definition. The proposed frameworks include National Emergency Department Overcrowding Score (NEDOCS) and Emergency Department Work Index (EDWIN) ~\cite{sartini_overcrowding_2022}. Regardless of the definition, crowding is always
 
 \begin{quote}
     \emph{a situation in which demand for service exceeds the ability to provide care within a reasonable time, causing physicians and nurses to be unable to provide quality care}
 \end{quote}
 
-as was eloquently expressed by \cite{CanadianJournalEmergencyMedicine2001}.
+as was expressed in the \emph{Canadian Journal of Emergency Medicine} ~\cite{CanadianJournalEmergencyMedicine2001}.
 
-Regardless of the definition, crowding has become a worldwide public health issue \cite{sartini_overcrowding_2022}, the negative impacts of which can be divided into three broad categories based on their target: the patient, the staff, and the entire healthcare system. 
-First, crowding has been repeatedly associated with increased mortality \cite{berg_associations_2019} and increased number of medication errors \cite{KULSTAD2010304}. Second, crowding has been shown to increase the stress levels of nurses and physicians \cite{bond_frequency_2007}. 
-Third, crowding results in ambulance diversions diverting ambulances to another ED \cite{asplin2003conceptual}, which delays patient access to care and disrupts coordination between hospitals. 
-In addition, crowding compromises the ability of the ED to respond to mass emergencies or at least their capability to provide quality care to less urgent patients \cite{Bernstein2009}.
+Regardless of the definition, crowding has become a worldwide public health issue ~\cite{sartini_overcrowding_2022}. The negative impacts can be divided into three broad categories based on their target: the patient, the staff, and the entire healthcare system. 
+First, crowding has been repeatedly associated with increased mortality ~\cite{berg_associations_2019} and increased number of medication errors ~\cite{KULSTAD2010304}. Second, crowding has been shown to increase the stress levels of nurses and physicians ~\cite{bond_frequency_2007}. 
+Third, crowding results in ambulance diversions diverting ambulances to another ED ~\cite{asplin2003conceptual}, which delays patient access to care and disrupts coordination between hospitals. 
+In addition, crowding compromises the ability of the ED to respond to mass emergencies or at least their capability to provide quality care to less urgent patients ~\cite{Bernstein2009}.
 
 \subsection{Emergency department forecasting}
 
-Emergency department forecasting refers to the process of predicting future utilization of the ED. Accurate forecasting would enable proactive resource allocation that could ultimately prevent overcrowding along with its harmful consequences. 
-In previous literature, the predictability of a wide set of target variables has been investigated. \cite{gul2018exhaustive} These include amount of patient arrivals \cite{zibners2006local}, amount of patient admissions \cite{GOLMOHAMMADI2016535}, length of stay \cite{gul2015forecasting}, and occupancy \cite{tuominen_forecasting_2024}.
+Emergency department forecasting refers to the process of predicting future occupancy of the ED. Accurate forecasting would enable proactive resource allocation that could ultimately prevent crowding along with its harmful consequences ~\cite{gul2018exhaustive}.
+Previous literature investigates the predictability of a wide set of target variables ~\cite{gul2018exhaustive}. These include amount of patient arrivals ~\cite{zibners2006local}, amount of patient admissions ~\cite{GOLMOHAMMADI2016535}, length of stay ~\cite{gul2015forecasting}, and occupancy ~\cite{tuominen_forecasting_2024}.
 
-Almost all previous ED forecasting literature has used either \emph{statistical models} or \emph{machine learning models}. Statistical models include ARIMA variants and exponential smoothing methods \cite{brockwell_introduction_2016}. Machine learning models include artificial neural networks (ANNs), decision trees, and support vector machines, along with regression-based approaches such as linear, logistic, and Poisson regression \cite{james2021introduction}. \cite{gul2018exhaustive}
+Almost all previous ED forecasting literature has used either \emph{statistical models} or \emph{machine learning models}. Statistical models include ARIMA variants and exponential smoothing methods ~\cite{brockwell_introduction_2016}. Machine learning models include artificial neural networks (ANNs), decision trees, support vector machines, and regression-based approaches such as linear, logistic, and Poisson regression ~\cite{james2021introduction,gul2018exhaustive}.
 
-On the other hand, the utilization of FMs has not been reported in the previous literature for ED occupancy data specifically. (However, FMs have bee nreported to get promising results in other domains like x \cite{} and y \cite{}) This suggests that FMs could be a promising tool for ED forecasting.
+On the other hand, the use of foundation models has not been reported in the previous literature for ED occupancy data specifically. However, FMs have been reported to get promising results in other domains like energy load forecasting ~\cite{saravanan2025shorttermloadforecasting} and restaurant sales forecasting ~\cite{arab2025benchmarkingtimeseriesforecasting}. This suggests that foundation models could be a promising tool for ED forecasting.
 
-In practice, forecasting relies on historical observations to learn recurring patterns such as daily, weekly, and seasonal cycles, as well as long-term trends. Explanatory variables, such as weather, traffic, and hospital bed availability can be used to improve accuracy. Forecasts can be point estimates or full predictive distributions. \cite{tuominen_forecasting_2024}
+In practice, forecasting relies on historical observations to learn recurring patterns such as daily, weekly, and seasonal cycles, as well as long-term trends. Explanatory variables, such as weather, traffic, and hospital bed availability can be used to improve accuracy. Forecasts can be point estimates or full predictive distributions. ~\cite{tuominen_forecasting_2024}
 
 \section{Time series forecasting}
 
-The goal of time series forecasting is to predict the future evolution of a data sequence based on its past values. External data sequences can be included for more accurate forecasts. \cite{hyndman2018forecasting} For example, future hourly ED occupancy can be predicted using past ED occupancy data, calendar information, and weather.
+The goal of time series forecasting is to predict the future evolution of a data sequence based on its past values. External data sequences can be included for more accurate forecasts ~\cite{hyndman2018forecasting}. For example, future hourly ED occupancy can be predicted using past ED occupancy data, calendar information, and weather.
 
-A discrete-time time series is a set of discrete values $\{x_t\}$, where $t$ denotes a specific time \cite{brockwell_introduction_2016}. In this thesis, the term 'time series' refers always to discrete-time time series. The intervals between $t$ are usually fixed and of equal length.
+A discrete-time time series is a set of discrete values $\{x_t\}$, where $t$ denotes a specific time ~\cite{brockwell_introduction_2016}. In this thesis, the term 'time series' refers always to discrete-time time series. The intervals between $t$ are usually fixed and of equal length.
 
-The term univariate refers to data that consists of a single attribute or variable. In contrast, multivariate data consists of multiple related variables observed over time, where the relationships between variables can provide additional information for forecasting. It can be denoted as $\{\mathbf{x}_{t}\}$, where $\mathbf{x}_t$ is a vector. \cite{brockwell_introduction_2016} Other variables than the one we predict are called covariates or exogenous inputs.
+The term univariate refers to data that consists of a single attribute or variable. In contrast, multivariate data consists of multiple related variables observed over time, where the relationships between variables can provide additional information for forecasting. It can be denoted as $\{\mathbf{x}_{t}\}$, where $\mathbf{x}_t$ is a vector. Other variables than the one we predict are called covariates or exogenous inputs.~\cite{brockwell_introduction_2016}
 
-For a time series to be suitable for forecasting, it must exhibit identifiable patterns. The trend component represents the long-term direction or gradual change in the data, which, in the case of ED occupancy data, may reflect factors such as population growth. Seasonality means repeating patterns that occur at regular intervals. For example, ED occupancy peaks daily between 16:00-19:00 and is at its lowest between 04:00-07:00 \cite{tuominen_forecasting_2024}.
-Random noise refers to irregular and random fluctuations that cannot be explained by any pattern. After all, many things, such as accidents happen randomly. These and many other patterns, including patterns from covariates, make forecasting possible. \cite{brockwell_introduction_2016}
+For a time series to be suitable for forecasting, it must exhibit identifiable patterns. The trend component represents the long-term direction or gradual change in the data, which, in the case of ED occupancy data, may reflect factors such as population growth. Seasonality means repeating patterns that occur at regular intervals. For example, ED occupancy in Acuta peaks daily between 16:00-19:00 and is at its lowest between 04:00-07:00 ~\cite{tuominen_forecasting_2024}.
+Random noise refers to irregular and random fluctuations that cannot be explained by any pattern. After all, many events, such as individual accidental injuries, occur randomly. These and many other patterns, including patterns from covariates, make forecasting possible. ~\cite{brockwell_introduction_2016}
 
 A \emph{model} is a mathematical equation that describes the patterns found in the data. The objective is to find a model that effectively captures the underlying structure of the time series. 
 This relationship can be formally expressed with a general equation:
 \begin{equation}
 y_{t+1} = f(y_{t}, y_{t-1}, \dots, \mathbf{x}_{t+1}, \mathbf{x}_{t}, \dots) + \epsilon_{t+1}
 \end{equation}
-The function $f$ represents the model itself. Specifies the relationship between the target variable $y_{t+1}$ and the past values of the target variable $y_{t}, y_{t-1}, \dots$,
+The function $f$ represents the model itself. It specifies the relationship between the target variable $y_{t+1}$ and the past values of the target variable $y_{t}, y_{t-1}, \dots$,
 and the present and past values of the covariates $\mathbf{x}_{t}, \mathbf{x}_{t-1}, \dots$.
 The term $\epsilon_t$ is the random noise that is not explained by the model.
-The function $f$ can be a simple statistical model or a more complex machine learning model like a neural network. \cite{hyndman2018forecasting}
+The function $f$ can be a simple statistical model or a more complex machine learning model like a neural network. ~\cite{hyndman2018forecasting}
 
 The future is always unpredictable to some extent. Therefore, predicting the entire probability distribution of a future value, rather than just a single value, is often useful. This is called a forecast distribution.
 Prediction intervals represents a range of values that the future value could take given some probability. For example, a 90 \% prediction interval contains the actual value with 90 \% probability.
-In contrast, a point forecast represents the best single estimate of a future value. It is often the mean or median of the forecast distribution. \cite{hyndman2018forecasting}
+In contrast, a point forecast represents the best single estimate of a future value. It is often the mean or median of the forecast distribution. ~\cite{hyndman2018forecasting}
 
-\section{Foundational models}
+\section{Foundation models}
 
-\emph{Foundational models} are artificial intelligence (AI) systems that perform well in a wide range of diverse tasks. These models are trained on massive amounts of diverse data. Foundational models use deep neural network architectures with parameters ranging from hundreds of millions to hundreds of billions, depending on the application domain. \cite{bommasani2022opportunitiesrisksfoundationmodels} For example, foundation models have been developed for time series forecasting. A single foundation time series model can predict diverse time series data, from ED occupancy to stock prices.
+\emph{Foundation models} are artificial intelligence (AI) systems that perform well in a wide range of diverse tasks. These models are trained on massive amounts of diverse data. Foundation models use deep neural network architectures with parameters ranging from tens of millions to hundreds of billions, depending on the application domain. For example, foundation models have been developed for time series forecasting. A single foundation time series model can predict diverse time series data, from ED occupancy to stock prices. ~\cite{bommasani2022opportunitiesrisksfoundationmodels}
 
-Foundational models differ from traditional machine learning models that  are trained for a specific purpose. For example, a model can be trained to forecast ED occupancy for one specific hospital. Advancements in computing have made it possible to train a larger model for multiple different purposes \cite{bommasani2022opportunitiesrisksfoundationmodels}. 
+Foundation models differ from traditional task-specific machine learning models. Traditional models are typically trained from scratch for a single specific task, such as forecasting ED occupancy for one particular hospital. In contrast, foundation models are pre-trained on massive amounts of diverse data and can be adapted to multiple different tasks. Advancements in computing have made it possible to train such large models for multiple different purposes ~\cite{bommasani2022opportunitiesrisksfoundationmodels}. 
 
+Transfer learning is a concept of transferring knowledge from one learned task to other tasks ~\cite{Raffel2020T5}. From vast training data, fundamental structures that are true for all tasks in one domain, are learned ~\cite{Raffel2020T5}. For example, ED occupancy and stock prices could have same kind of daily fluctuation. Transfer learning and the vast size of foundation models is what makes them work ~\cite{bommasani2022opportunitiesrisksfoundationmodels}.
 
-Transfer learning is a concept of transferring knowledge from one learned task to other tasks \cite{Raffel2020T5}. From vast training data, fundamental structures that are true for all tasks in one domain, are learned \cite{Raffel2020T5}. For example, ED occupancy and stock prices could have same kind of daily fluctuation. Transfer learning and the vast size of foundation models is what makes them work \cite{bommasani2022opportunitiesrisksfoundationmodels}.
-
-In \cite{bommasani2022opportunitiesrisksfoundationmodels}, the authors state three advancements that have enabled the size of foundation models. First, improvement in computational hardware. Second, the Transformer architecture that efficiently utilized this hardware for training \cite{vaswani_attention_2017}. Third, access to larger datasets for training.
+In Bommasani et al. ~\cite{bommasani2022opportunitiesrisksfoundationmodels}, the authors state three advancements that have enabled the size of foundation models. First, improvement in computational hardware. Second, the Transformer architecture that efficiently used this hardware for training ~\cite{vaswani_attention_2017}. Third, access to larger datasets for training.
 
 \subsection{Pre-training and fine-tuning paradigm}
 
 Deep learning is a part of machine learning that uses deep neural networks to learn from data.
-These networks learn data representations at several levels. \cite{lecun2015deep}
+These networks learn data representations at several levels. ~\cite{lecun2015deep}
 Deep learning powers most modern AI models.
-All foundation models in this thesis use deep learning, as does the TFT baseline \cite{lim2021temporal}.
+All foundation models in this thesis use deep learning, as does the TFT baseline from Tuominen et. al ~\cite{tuominen_forecasting_2024}~\cite{lim2021temporal}.
 
-In \cite{Domingos2012Few}, the author outlines three key aspects of developing machine learning models.
-First step is choosing representation, or model. In case of deep learning, this is done by choosing a model architecture.
+In Domingos ~\cite{Domingos2012Few}, the author outlines three key aspects of developing machine learning models.
+First step is choosing representation, or model. In case of deep learning, this is done by choosing a neural network architecture.
 Then the model is optimized or trained to fit the data. Training is done by adjusting the model parameters to minimize a loss function.
-This step is computationally intensive and often requires massive datacenters and large amount of time \cite{bommasani2022opportunitiesrisksfoundationmodels}.
+This step is computationally intensive and often requires massive datacenters and significant amount of time ~\cite{bommasani2022opportunitiesrisksfoundationmodels}.
 The final step is evaluation, where the model's performance is measured using data not seen during training.
-Deep learning follows this framework \cite{lecun2015deep}.
+Deep learning follows this framework ~\cite{lecun2015deep}.
 
-Foundational models use different framework and they represents a paradigm shift from traditional machine learning framework. For a specific task, already pre-trained foundation model can be selected.
-Foundation model is often fine-tuned for a specific task. After fine tuning, the model is evaluated. \cite{bommasani2022opportunitiesrisksfoundationmodels}
+Foundation models use different framework and they represents a paradigm shift from traditional machine learning framework. For a specific task, already pre-trained foundation model can be selected.
+The foundation model is often fine-tuned for a specific task. After fine tuning, the model is evaluated. ~\cite{bommasani2022opportunitiesrisksfoundationmodels}
 
-This approach saves a lot of computation, time and effort, since the foundation model is already pre-trained. It democratizes access to advanced AI models.
+This approach saves a lot of computation, time and effort, since the foundation model is already pre-trained. This approach makes advanced AI models accessible to a much broader audience.
 In case of ED occupancy forecasting, every hospital has its own characteristics. Therefore model trained for one hospital would perform poorly for other hospitals.
-Training a separate model for each hospital would be expensive. Foundational models can solve this problem.
+Training a separate model for each hospital would be expensive. Foundation models can solve this problem.
 

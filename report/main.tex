@@ -74,7 +74,7 @@
 %   programs - if you wish to display code snippets
 % Example: \documentclass[english, authoryear]{tauthesis}
 %          thesis in English with author-year citations
-\documentclass[english]{tauthesis}
+\documentclass[english, ieee]{tauthesis}
 
 % The glossaries package throws a warning:
 % No language module detected for 'finnish'.
@@ -109,6 +109,8 @@
 % Newest mhchem is attached for compatibility
 % \usepackage{chemfig}
 % \usepackage[version=4]{mhchem}
+
+\usepackage{url}
 
 % Text hyperlinking
 \usepackage{hyperref}
@@ -188,7 +190,7 @@
 \examiner[Examiner]{M.Sc. Eetu Pulkkinen}
 
 % The finishing date of the thesis (YYYY-MM-DD).
-\finishdate{2025}{12}{18}
+\finishdate{2025}{11}{20}
 
 % The type of the thesis (e.g. Kandidaatintyö
 % or Master of Science Thesis) in the primary
@@ -204,8 +206,8 @@
 % The keywords to the thesis in the primary and
 % the secondary languages of the thesis
 \keywords%
-    {time series forecasting, foundational models, emergency department occupancy prediction} % muokkaa
-    {keyword, keyword, keyword, keyword, keyword}
+    {time series forecasting, emergency department occupancy forecasting, time series foundational models, foundation models}
+    {aikasarjaennustaminen, Päivystyspoliklinikoiden kuormituksen ennustus, esikoulutetut aikasarjamallit, perustamallit}
 
 \maketitle
 
@@ -223,7 +225,14 @@
 % the thesis was signed in.
 \abstract{tex/abstract.tex}
 \otherabstract{tex/tiivistelma.tex}
-% \preface{tex/alkusanat.tex}{Tampereella}
+
+% AI usage disclosure
+\clearpage
+\chapter*{USE OF AI IN THESIS}
+\input{tex/useofai.tex} 
+\clearpage
+
+\preface{tex/preface.tex}{Tampere}
 
 %%%%% Table of contents.
 
@@ -289,7 +298,7 @@
 \label{ch:latency_by_subset}
 \input{../output/tables/latency_by_subset.tex}
 
-\label{ch:latency_by_subset}
+\label{ch:ram_by_sybset}
 \input{../output/tables/ram_by_subset.tex}
 
 \end{appendices}

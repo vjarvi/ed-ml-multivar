@@ -374,6 +374,7 @@
       \strng{authorbibnamehash}{0cd296e1dd3e0dd7182f980ca401e7cf}
       \strng{authornamehash}{e4ff443de4f9646984090a6e1288c77a}
       \strng{authorfullhash}{0cd296e1dd3e0dd7182f980ca401e7cf}
+      \field{extraname}{1}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -446,458 +447,6 @@
       \endverb
       \verb{url}
       \verb https://otexts.com/fpp2/
-      \endverb
-    \endentry
-    \entry{asplin2003conceptual}{article}{}
-      \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=a94a5088fdfee9da7a731bf964d454c2}{%
-           family={Asplin},
-           familyi={A\bibinitperiod},
-           given={Brent\bibnamedelima R},
-           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=10a00d9049c74d840df7f0124c5370dd}{%
-           family={Magid},
-           familyi={M\bibinitperiod},
-           given={David\bibnamedelima J},
-           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0b4a3327cf461c71d7dab464281718e9}{%
-           family={Rhodes},
-           familyi={R\bibinitperiod},
-           given={Karin\bibnamedelima V},
-           giveni={K\bibinitperiod\bibinitdelim V\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=571ff4822ec05883cbceadda3fede017}{%
-           family={Solberg},
-           familyi={S\bibinitperiod},
-           given={Leif\bibnamedelima I},
-           giveni={L\bibinitperiod\bibinitdelim I\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=761032c1d88862783df3063de6eca524}{%
-           family={Lurie},
-           familyi={L\bibinitperiod},
-           given={Nicole},
-           giveni={N\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=11b3fd2a3298530c17715929790245d4}{%
-           family={Camargo\bibnamedelima Jr},
-           familyi={C\bibinitperiod\bibinitdelim J\bibinitperiod},
-           given={Carlos\bibnamedelima A},
-           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
-      \strng{namehash}{b3c3787330de85c2368deb5135104806}
-      \strng{fullhash}{90b7c8b822a408ddf813acdb7eca56a9}
-      \strng{bibnamehash}{90b7c8b822a408ddf813acdb7eca56a9}
-      \strng{authorbibnamehash}{90b7c8b822a408ddf813acdb7eca56a9}
-      \strng{authornamehash}{b3c3787330de85c2368deb5135104806}
-      \strng{authorfullhash}{90b7c8b822a408ddf813acdb7eca56a9}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Annals of emergency medicine}
-      \field{number}{2}
-      \field{title}{A conceptual model of emergency department crowding}
-      \field{volume}{42}
-      \field{year}{2003}
-      \field{pages}{173\bibrangedash 180}
-      \range{pages}{8}
-    \endentry
-    \entry{richardson_increase_2006}{article}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e3316bfb4998135ff5693402493da68c}{%
-           family={Richardson},
-           familyi={R\bibinitperiod},
-           given={Drew\bibnamedelima B.},
-           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \list{location}{1}{%
-        {Emergency Department, Australian National University Medical School, Canberra Hospital Yamba Drive, Garran, ACT 2605, Australia}%
-      }
-      \strng{namehash}{e3316bfb4998135ff5693402493da68c}
-      \strng{fullhash}{e3316bfb4998135ff5693402493da68c}
-      \strng{bibnamehash}{e3316bfb4998135ff5693402493da68c}
-      \strng{authorbibnamehash}{e3316bfb4998135ff5693402493da68c}
-      \strng{authornamehash}{e3316bfb4998135ff5693402493da68c}
-      \strng{authorfullhash}{e3316bfb4998135ff5693402493da68c}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{6}
-      \field{issn}{0025-729X}
-      \field{journaltitle}{The Medical Journal of Australia}
-      \field{month}{3}
-      \field{number}{5}
-      \field{shortjournal}{Med J Aust}
-      \field{title}{Increase in patient mortality at 10 days associated with emergency department overcrowding}
-      \field{volume}{184}
-      \field{year}{2006}
-      \field{dateera}{ce}
-      \field{pages}{213\bibrangedash 216}
-      \range{pages}{4}
-      \verb{doi}
-      \verb 10.5694/j.1326-5377.2006.tb00204.x
-      \endverb
-      \verb{urlraw}
-      \verb https://www.mja.com.au/journal/2006/184/5/increase-patient-mortality-10-days-associated-emergency-department-overcrowding
-      \endverb
-      \verb{url}
-      \verb https://www.mja.com.au/journal/2006/184/5/increase-patient-mortality-10-days-associated-emergency-department-overcrowding
-      \endverb
-      \keyw{Bed Occupancy,Crowding,Emergency Service,Hospital,Hospital Mortality,Retrospective Studies,Time Factors,Triage,Patient Admission,Australia,Mortality,Cohort Studies}
-    \endentry
-    \entry{CanadianJournalEmergencyMedicine2001}{article}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{journaltitle}{Canadian Journal of Emergency Medicine}
-      \field{number}{2}
-      \field{volume}{3}
-      \field{year}{2001}
-      \field{pages}{82\bibrangedash 84}
-      \range{pages}{3}
-      \verb{doi}
-      \verb 10.1017/S1481803500005285
-      \endverb
-    \endentry
-    \entry{bernstein2009part1}{article}{}
-      \name{author}{14}{}{%
-        {{un=0,uniquepart=base,hash=352ca14598e8230b7d2b195643c26864}{%
-           family={Bernstein},
-           familyi={B\bibinitperiod},
-           given={Steven\bibnamedelima L.},
-           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1eeacb579d8ce27f51f0b86a558c69b6}{%
-           family={Aronsky},
-           familyi={A\bibinitperiod},
-           given={Dominik},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=192038fd1f0be50701892f1aaf6fc804}{%
-           family={Duseja},
-           familyi={D\bibinitperiod},
-           given={Rajan},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=20e6469c5407eb26e56094d4c079cb7d}{%
-           family={Epstein},
-           familyi={E\bibinitperiod},
-           given={Stephen},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7a32d17a78776c6b326a656642b4658b}{%
-           family={Handel},
-           familyi={H\bibinitperiod},
-           given={Daniel},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f02a8e59d7eb86385e9875e5689031e0}{%
-           family={Hwang},
-           familyi={H\bibinitperiod},
-           given={Ula},
-           giveni={U\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f6b8004d153109a23f840c7f6b82a61e}{%
-           family={McCarthy},
-           familyi={M\bibinitperiod},
-           given={Margaret},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ea355ca989527e50849ca58d0f32f63b}{%
-           family={McConnell},
-           familyi={M\bibinitperiod},
-           given={K.\bibnamedelimi John},
-           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=caae3c2c786a30b30e16f713b0c35bcb}{%
-           family={Pines},
-           familyi={P\bibinitperiod},
-           given={Jesse\bibnamedelima M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=28d80e300d62ec49f98f11c3ccf38ef4}{%
-           family={Rathlev},
-           familyi={R\bibinitperiod},
-           given={Niels},
-           giveni={N\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4b97ac1546e81262b6fb72e9531a15c3}{%
-           family={Schafermeyer},
-           familyi={S\bibinitperiod},
-           given={Robert},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=98d2010f69ee547de82b2bc804bc8de0}{%
-           family={Zwemer},
-           familyi={Z\bibinitperiod},
-           given={Frank},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1c1c44467b385734fe23c276ba84e74f}{%
-           family={Schull},
-           familyi={S\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a94a5088fdfee9da7a731bf964d454c2}{%
-           family={Asplin},
-           familyi={A\bibinitperiod},
-           given={Brent\bibnamedelima R.},
-           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{30bb5ee320f05a9df7f48dce204274f5}
-      \strng{fullhash}{a8e8fa107aa2d759078343974e654cc9}
-      \strng{bibnamehash}{a8e8fa107aa2d759078343974e654cc9}
-      \strng{authorbibnamehash}{a8e8fa107aa2d759078343974e654cc9}
-      \strng{authornamehash}{30bb5ee320f05a9df7f48dce204274f5}
-      \strng{authorfullhash}{a8e8fa107aa2d759078343974e654cc9}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Academic Emergency Medicine}
-      \field{number}{11}
-      \field{shortjournal}{Acad Emerg Med}
-      \field{title}{Emergency Department Crowding, Part 1: Definition and Magnitude}
-      \field{volume}{16}
-      \field{year}{2009}
-      \field{pages}{106\bibrangedash 113}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1111/j.1553-2712.2009.00590.x
-      \endverb
-    \endentry
-    \entry{KULSTAD2010304}{article}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=6fe41d1d804b0b41bedcaa46f3bc8bab}{%
-           family={Kulstad},
-           familyi={K\bibinitperiod},
-           given={Erik\bibnamedelima B.},
-           giveni={E\bibinitperiod\bibinitdelim B\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b0ccf7f897235a841c654ef6f2604905}{%
-           family={Sikka},
-           familyi={S\bibinitperiod},
-           given={Rishi},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=af13ced6f3248498b3d1e76d33798bcb}{%
-           family={Sweis},
-           familyi={S\bibinitperiod},
-           given={Rolla\bibnamedelima T.},
-           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=02e08d0f805b46125f5d21f629b34c5a}{%
-           family={Kelley},
-           familyi={K\bibinitperiod},
-           given={Ken\bibnamedelima M.},
-           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=fade2cf72d07f79784cefd2babecbd4d}{%
-           family={Rzechula},
-           familyi={R\bibinitperiod},
-           given={Kathleen\bibnamedelima H.},
-           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{6eec9ebd43ac620a92ab79d122b03237}
-      \strng{fullhash}{92bc9178b0d9afb70a1ca4790bfd545c}
-      \strng{bibnamehash}{92bc9178b0d9afb70a1ca4790bfd545c}
-      \strng{authorbibnamehash}{92bc9178b0d9afb70a1ca4790bfd545c}
-      \strng{authornamehash}{6eec9ebd43ac620a92ab79d122b03237}
-      \strng{authorfullhash}{92bc9178b0d9afb70a1ca4790bfd545c}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0735-6757}
-      \field{journaltitle}{The American Journal of Emergency Medicine}
-      \field{number}{3}
-      \field{title}{ED overcrowding is associated with an increased frequency of medication errors}
-      \field{volume}{28}
-      \field{year}{2010}
-      \field{pages}{304\bibrangedash 309}
-      \range{pages}{6}
-      \verb{doi}
-      \verb https://doi.org/10.1016/j.ajem.2008.12.014
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S0735675708008310
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S0735675708008310
-      \endverb
-    \endentry
-    \entry{bond_frequency_2007}{article}{}
-      \name{author}{11}{}{%
-        {{un=0,uniquepart=base,hash=38dcfe740e1334e4ffd97b968051221d}{%
-           family={Bond},
-           familyi={B\bibinitperiod},
-           given={Kenneth},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a37166222a11be395580de4454bcd43c}{%
-           family={Ospina},
-           familyi={O\bibinitperiod},
-           given={María},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1002880c19f12c4b61294dc507796676}{%
-           family={Blitz},
-           familyi={B\bibinitperiod},
-           given={Sandra},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e78eb77bfaec66747dd757fd9ffd692d}{%
-           family={Afilalo},
-           familyi={A\bibinitperiod},
-           given={Marc},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=59349bc33dd6b3358b4d33374292c4d7}{%
-           family={Sam},
-           familyi={S\bibinitperiod},
-           given={Gzx},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1f7ca7cab233d4f824d502baf76847df}{%
-           family={Bullard},
-           familyi={B\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9774a98d8e160184fd7ee88e75cd8e6d}{%
-           family={Innes},
-           familyi={I\bibinitperiod},
-           given={Grant},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=589f1664bdfb13eebd4d13ced710ed35}{%
-           family={Holroyd},
-           familyi={H\bibinitperiod},
-           given={Brian},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7860d1d1147cc858072a0724de01512e}{%
-           family={Curry},
-           familyi={C\bibinitperiod},
-           given={Gil},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=1c1c44467b385734fe23c276ba84e74f}{%
-           family={Schull},
-           familyi={S\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0ee800163574b9bcdb025acb9dddf6aa}{%
-           family={Rowe},
-           familyi={R\bibinitperiod},
-           given={Brian},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{f94346eaa4257a50f38d712607919be0}
-      \strng{fullhash}{db1d59a3b3d84faed5310942107b08c9}
-      \strng{bibnamehash}{db1d59a3b3d84faed5310942107b08c9}
-      \strng{authorbibnamehash}{db1d59a3b3d84faed5310942107b08c9}
-      \strng{authornamehash}{f94346eaa4257a50f38d712607919be0}
-      \strng{authorfullhash}{db1d59a3b3d84faed5310942107b08c9}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Healthcare quarterly (Toronto, Ont.)}
-      \field{month}{02}
-      \field{title}{Frequency, Determinants and Impact of Overcrowding in Emergency Departments in Canada: A National Survey}
-      \field{volume}{10}
-      \field{year}{2007}
-      \field{pages}{32\bibrangedash 40}
-      \range{pages}{9}
-      \verb{doi}
-      \verb 10.12927/hcq.2007.19312
-      \endverb
-    \endentry
-    \entry{gul2018exhaustive}{article}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=962249b1514a396fd3cf3524b6a9cb59}{%
-           family={Gul},
-           familyi={G\bibinitperiod},
-           given={Muhammet},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=3686ae99cfef507154125bbf99d13959}{%
-           family={Celik},
-           familyi={C\bibinitperiod},
-           given={Erkan},
-           giveni={E\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{213759c545b40b8fa46e11631673433c}
-      \strng{fullhash}{213759c545b40b8fa46e11631673433c}
-      \strng{bibnamehash}{213759c545b40b8fa46e11631673433c}
-      \strng{authorbibnamehash}{213759c545b40b8fa46e11631673433c}
-      \strng{authornamehash}{213759c545b40b8fa46e11631673433c}
-      \strng{authorfullhash}{213759c545b40b8fa46e11631673433c}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Emergency departments (EDs) provide medical treatment for a broad spectrum of illnesses and injuries to patients who arrive at all hours of the day. The quality and efficient delivery of health care in EDs are associated with a number of factors, such as patient overall length of stay (LOS) and admission, prompt ambulance diversion, quick and accurate triage, nurse and physician assessment, diagnostic and laboratory services, consultations and treatment. One of the most important ways to plan the healthcare delivery efficiently is to make forecasts of ED processes. The aim this study is thus to provide an exhaustive review for ED stakeholders interested in applying forecasting methods to their ED processes. A categorisation, analysis and interpretation of 102 papers is performed for review. This exhaustive review provides an insight for researchers and practitioners about forecasting in EDs in terms of showing current state and potential areas for future attempts.}
-      \field{issn}{2047-6965}
-      \field{journaltitle}{Health Systems}
-      \field{note}{No potential conflict of interest was reported by the authors.}
-      \field{number}{4}
-      \field{title}{An exhaustive review and analysis on applications of statistical forecasting in hospital emergency departments}
-      \field{volume}{9}
-      \field{year}{2018}
-      \field{pages}{263\bibrangedash 284}
-      \range{pages}{22}
-      \verb{doi}
-      \verb 10.1080/20476965.2018.1547348
-      \endverb
-      \verb{urlraw}
-      \verb https://www.tandfonline.com/doi/full/10.1080/20476965.2018.1547348
-      \endverb
-      \verb{url}
-      \verb https://www.tandfonline.com/doi/full/10.1080/20476965.2018.1547348
-      \endverb
-    \endentry
-    \entry{brockwell_introduction_2016}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=7938eb94e7146418eee84171bc1f607a}{%
-           family={Peter\bibnamedelimb J.\bibnamedelimi Brockwell},
-           familyi={P\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim B\bibinitperiod},
-           given={Richard\bibnamedelimb A.\bibnamedelimi Davis},
-           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{7938eb94e7146418eee84171bc1f607a}
-      \strng{fullhash}{7938eb94e7146418eee84171bc1f607a}
-      \strng{bibnamehash}{7938eb94e7146418eee84171bc1f607a}
-      \strng{authorbibnamehash}{7938eb94e7146418eee84171bc1f607a}
-      \strng{authornamehash}{7938eb94e7146418eee84171bc1f607a}
-      \strng{authorfullhash}{7938eb94e7146418eee84171bc1f607a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Introduction to Time Series and Forecasting}
-      \field{year}{2016}
-      \field{dateera}{ce}
-      \verb{doi}
-      \verb 10.1007/978-3-319-29854-2
       \endverb
     \endentry
     \entry{bommasani2022opportunitiesrisksfoundationmodels}{misc}{}
@@ -1596,8 +1145,8 @@
       \strng{authorbibnamehash}{e1331c79138f819881e39bc36f1b80e0}
       \strng{authornamehash}{e1331c79138f819881e39bc36f1b80e0}
       \strng{authorfullhash}{38016a5c6e9130115c95746c93874ec8}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
@@ -1612,6 +1161,721 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2108.07258
+      \endverb
+    \endentry
+    \entry{tuominen2023edmultivar}{misc}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=152c5e879ca9a97af6a23323fc7e31d5}{%
+           family={Tuominen},
+           familyi={T\bibinitperiod},
+           given={Jalmari},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a43d4ec8a993a9a160b09129c378c55d}{%
+           family={Pulkkinen},
+           familyi={P\bibinitperiod},
+           given={Eetu},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a14051cefe8817b817d29ffd2a5aa7ad}{%
+           family={Peltonen},
+           familyi={P\bibinitperiod},
+           given={Jaakko},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0744b29b68512658ff7aee194e520ce}{%
+           family={Kanniainen},
+           familyi={K\bibinitperiod},
+           given={Juho},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=54e039ce45700217241f214a24ce6424}{%
+           family={Oksala},
+           familyi={O\bibinitperiod},
+           given={Niku},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88f54e3dca45d248d32449bf37dce0b1}{%
+           family={Palomäki},
+           familyi={P\bibinitperiod},
+           given={Ari},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c01420fcdb8e5c6fd234fb6862cb5189}{%
+           family={Roine},
+           familyi={R\bibinitperiod},
+           given={Antti},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{e4ff443de4f9646984090a6e1288c77a}
+      \strng{fullhash}{0cd296e1dd3e0dd7182f980ca401e7cf}
+      \strng{bibnamehash}{0cd296e1dd3e0dd7182f980ca401e7cf}
+      \strng{authorbibnamehash}{0cd296e1dd3e0dd7182f980ca401e7cf}
+      \strng{authornamehash}{e4ff443de4f9646984090a6e1288c77a}
+      \strng{authorfullhash}{0cd296e1dd3e0dd7182f980ca401e7cf}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/tuomijal/ed-ml-multivar}}
+      \field{journaltitle}{GitHub repository}
+      \field{note}{Code and data for: \url{https://doi.org/10.1016/j.ijforecast.2023.12.002}}
+      \field{title}{ed-ml-multivar: Forecasting Emergency Department Occupancy with Advanced Machine Learning Models and Multivariable Input}
+      \field{year}{2023}
+    \endentry
+    \entry{gul2018exhaustive}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=962249b1514a396fd3cf3524b6a9cb59}{%
+           family={Gul},
+           familyi={G\bibinitperiod},
+           given={Muhammet},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3686ae99cfef507154125bbf99d13959}{%
+           family={Celik},
+           familyi={C\bibinitperiod},
+           given={Erkan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{213759c545b40b8fa46e11631673433c}
+      \strng{fullhash}{213759c545b40b8fa46e11631673433c}
+      \strng{bibnamehash}{213759c545b40b8fa46e11631673433c}
+      \strng{authorbibnamehash}{213759c545b40b8fa46e11631673433c}
+      \strng{authornamehash}{213759c545b40b8fa46e11631673433c}
+      \strng{authorfullhash}{213759c545b40b8fa46e11631673433c}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Emergency departments (EDs) provide medical treatment for a broad spectrum of illnesses and injuries to patients who arrive at all hours of the day. The quality and efficient delivery of health care in EDs are associated with a number of factors, such as patient overall length of stay (LOS) and admission, prompt ambulance diversion, quick and accurate triage, nurse and physician assessment, diagnostic and laboratory services, consultations and treatment. One of the most important ways to plan the healthcare delivery efficiently is to make forecasts of ED processes. The aim this study is thus to provide an exhaustive review for ED stakeholders interested in applying forecasting methods to their ED processes. A categorisation, analysis and interpretation of 102 papers is performed for review. This exhaustive review provides an insight for researchers and practitioners about forecasting in EDs in terms of showing current state and potential areas for future attempts.}
+      \field{issn}{2047-6965}
+      \field{journaltitle}{Health Systems}
+      \field{note}{No potential conflict of interest was reported by the authors.}
+      \field{number}{4}
+      \field{title}{An exhaustive review and analysis on applications of statistical forecasting in hospital emergency departments}
+      \field{volume}{9}
+      \field{year}{2018}
+      \field{pages}{263\bibrangedash 284}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1080/20476965.2018.1547348
+      \endverb
+      \verb{urlraw}
+      \verb https://www.tandfonline.com/doi/full/10.1080/20476965.2018.1547348
+      \endverb
+      \verb{url}
+      \verb https://www.tandfonline.com/doi/full/10.1080/20476965.2018.1547348
+      \endverb
+    \endentry
+    \entry{asplin2003conceptual}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=a94a5088fdfee9da7a731bf964d454c2}{%
+           family={Asplin},
+           familyi={A\bibinitperiod},
+           given={Brent\bibnamedelima R},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=10a00d9049c74d840df7f0124c5370dd}{%
+           family={Magid},
+           familyi={M\bibinitperiod},
+           given={David\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b4a3327cf461c71d7dab464281718e9}{%
+           family={Rhodes},
+           familyi={R\bibinitperiod},
+           given={Karin\bibnamedelima V},
+           giveni={K\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=571ff4822ec05883cbceadda3fede017}{%
+           family={Solberg},
+           familyi={S\bibinitperiod},
+           given={Leif\bibnamedelima I},
+           giveni={L\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=761032c1d88862783df3063de6eca524}{%
+           family={Lurie},
+           familyi={L\bibinitperiod},
+           given={Nicole},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=11b3fd2a3298530c17715929790245d4}{%
+           family={Camargo\bibnamedelima Jr},
+           familyi={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Carlos\bibnamedelima A},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{b3c3787330de85c2368deb5135104806}
+      \strng{fullhash}{90b7c8b822a408ddf813acdb7eca56a9}
+      \strng{bibnamehash}{90b7c8b822a408ddf813acdb7eca56a9}
+      \strng{authorbibnamehash}{90b7c8b822a408ddf813acdb7eca56a9}
+      \strng{authornamehash}{b3c3787330de85c2368deb5135104806}
+      \strng{authorfullhash}{90b7c8b822a408ddf813acdb7eca56a9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of emergency medicine}
+      \field{number}{2}
+      \field{title}{A conceptual model of emergency department crowding}
+      \field{volume}{42}
+      \field{year}{2003}
+      \field{pages}{173\bibrangedash 180}
+      \range{pages}{8}
+    \endentry
+    \entry{richardson_increase_2006}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e3316bfb4998135ff5693402493da68c}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={Drew\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{location}{1}{%
+        {Emergency Department, Australian National University Medical School, Canberra Hospital Yamba Drive, Garran, ACT 2605, Australia}%
+      }
+      \strng{namehash}{e3316bfb4998135ff5693402493da68c}
+      \strng{fullhash}{e3316bfb4998135ff5693402493da68c}
+      \strng{bibnamehash}{e3316bfb4998135ff5693402493da68c}
+      \strng{authorbibnamehash}{e3316bfb4998135ff5693402493da68c}
+      \strng{authornamehash}{e3316bfb4998135ff5693402493da68c}
+      \strng{authorfullhash}{e3316bfb4998135ff5693402493da68c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{6}
+      \field{issn}{0025-729X}
+      \field{journaltitle}{The Medical Journal of Australia}
+      \field{month}{3}
+      \field{number}{5}
+      \field{shortjournal}{Med J Aust}
+      \field{title}{Increase in patient mortality at 10 days associated with emergency department overcrowding}
+      \field{volume}{184}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{pages}{213\bibrangedash 216}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.5694/j.1326-5377.2006.tb00204.x
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mja.com.au/journal/2006/184/5/increase-patient-mortality-10-days-associated-emergency-department-overcrowding
+      \endverb
+      \verb{url}
+      \verb https://www.mja.com.au/journal/2006/184/5/increase-patient-mortality-10-days-associated-emergency-department-overcrowding
+      \endverb
+      \keyw{Bed Occupancy,Crowding,Emergency Service,Hospital,Hospital Mortality,Retrospective Studies,Time Factors,Triage,Patient Admission,Australia,Mortality,Cohort Studies}
+    \endentry
+    \entry{CanadianJournalEmergencyMedicine2001}{article}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{journaltitle}{Canadian Journal of Emergency Medicine}
+      \field{number}{2}
+      \field{volume}{3}
+      \field{year}{2001}
+      \field{pages}{82\bibrangedash 84}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1017/S1481803500005285
+      \endverb
+    \endentry
+    \entry{KULSTAD2010304}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=6fe41d1d804b0b41bedcaa46f3bc8bab}{%
+           family={Kulstad},
+           familyi={K\bibinitperiod},
+           given={Erik\bibnamedelima B.},
+           giveni={E\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b0ccf7f897235a841c654ef6f2604905}{%
+           family={Sikka},
+           familyi={S\bibinitperiod},
+           given={Rishi},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af13ced6f3248498b3d1e76d33798bcb}{%
+           family={Sweis},
+           familyi={S\bibinitperiod},
+           given={Rolla\bibnamedelima T.},
+           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02e08d0f805b46125f5d21f629b34c5a}{%
+           family={Kelley},
+           familyi={K\bibinitperiod},
+           given={Ken\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fade2cf72d07f79784cefd2babecbd4d}{%
+           family={Rzechula},
+           familyi={R\bibinitperiod},
+           given={Kathleen\bibnamedelima H.},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6eec9ebd43ac620a92ab79d122b03237}
+      \strng{fullhash}{92bc9178b0d9afb70a1ca4790bfd545c}
+      \strng{bibnamehash}{92bc9178b0d9afb70a1ca4790bfd545c}
+      \strng{authorbibnamehash}{92bc9178b0d9afb70a1ca4790bfd545c}
+      \strng{authornamehash}{6eec9ebd43ac620a92ab79d122b03237}
+      \strng{authorfullhash}{92bc9178b0d9afb70a1ca4790bfd545c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0735-6757}
+      \field{journaltitle}{The American Journal of Emergency Medicine}
+      \field{number}{3}
+      \field{title}{ED overcrowding is associated with an increased frequency of medication errors}
+      \field{volume}{28}
+      \field{year}{2010}
+      \field{pages}{304\bibrangedash 309}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.ajem.2008.12.014
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0735675708008310
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0735675708008310
+      \endverb
+    \endentry
+    \entry{bond_frequency_2007}{article}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=38dcfe740e1334e4ffd97b968051221d}{%
+           family={Bond},
+           familyi={B\bibinitperiod},
+           given={Kenneth},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a37166222a11be395580de4454bcd43c}{%
+           family={Ospina},
+           familyi={O\bibinitperiod},
+           given={María},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1002880c19f12c4b61294dc507796676}{%
+           family={Blitz},
+           familyi={B\bibinitperiod},
+           given={Sandra},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e78eb77bfaec66747dd757fd9ffd692d}{%
+           family={Afilalo},
+           familyi={A\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=59349bc33dd6b3358b4d33374292c4d7}{%
+           family={Sam},
+           familyi={S\bibinitperiod},
+           given={Gzx},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1f7ca7cab233d4f824d502baf76847df}{%
+           family={Bullard},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9774a98d8e160184fd7ee88e75cd8e6d}{%
+           family={Innes},
+           familyi={I\bibinitperiod},
+           given={Grant},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=589f1664bdfb13eebd4d13ced710ed35}{%
+           family={Holroyd},
+           familyi={H\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7860d1d1147cc858072a0724de01512e}{%
+           family={Curry},
+           familyi={C\bibinitperiod},
+           given={Gil},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c1c44467b385734fe23c276ba84e74f}{%
+           family={Schull},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ee800163574b9bcdb025acb9dddf6aa}{%
+           family={Rowe},
+           familyi={R\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f94346eaa4257a50f38d712607919be0}
+      \strng{fullhash}{db1d59a3b3d84faed5310942107b08c9}
+      \strng{bibnamehash}{db1d59a3b3d84faed5310942107b08c9}
+      \strng{authorbibnamehash}{db1d59a3b3d84faed5310942107b08c9}
+      \strng{authornamehash}{f94346eaa4257a50f38d712607919be0}
+      \strng{authorfullhash}{db1d59a3b3d84faed5310942107b08c9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Healthcare quarterly (Toronto, Ont.)}
+      \field{month}{02}
+      \field{title}{Frequency, Determinants and Impact of Overcrowding in Emergency Departments in Canada: A National Survey}
+      \field{volume}{10}
+      \field{year}{2007}
+      \field{pages}{32\bibrangedash 40}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.12927/hcq.2007.19312
+      \endverb
+    \endentry
+    \entry{Bernstein2009}{article}{}
+      \name{author}{15}{}{%
+        {{un=0,uniquepart=base,hash=352ca14598e8230b7d2b195643c26864}{%
+           family={Bernstein},
+           familyi={B\bibinitperiod},
+           given={Steven\bibnamedelima L.},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1eeacb579d8ce27f51f0b86a558c69b6}{%
+           family={Aronsky},
+           familyi={A\bibinitperiod},
+           given={Dominik},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7e54116badf71754e8703336fe285f1}{%
+           family={Duseja},
+           familyi={D\bibinitperiod},
+           given={Reena},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=20e6469c5407eb26e56094d4c079cb7d}{%
+           family={Epstein},
+           familyi={E\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f630ab3e2302c4bf5f07c2694b2b88b2}{%
+           family={Handel},
+           familyi={H\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f02a8e59d7eb86385e9875e5689031e0}{%
+           family={Hwang},
+           familyi={H\bibinitperiod},
+           given={Ula},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9584fae1c3514e3adacf5566f1d05d39}{%
+           family={McCarthy},
+           familyi={M\bibinitperiod},
+           given={Melissa},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3b1cfeaec21bee32c624708fa63b9f24}{%
+           family={John\bibnamedelima McConnell},
+           familyi={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=caae3c2c786a30b30e16f713b0c35bcb}{%
+           family={Pines},
+           familyi={P\bibinitperiod},
+           given={Jesse\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28d80e300d62ec49f98f11c3ccf38ef4}{%
+           family={Rathlev},
+           familyi={R\bibinitperiod},
+           given={Niels},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b97ac1546e81262b6fb72e9531a15c3}{%
+           family={Schafermeyer},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=98d2010f69ee547de82b2bc804bc8de0}{%
+           family={Zwemer},
+           familyi={Z\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c1c44467b385734fe23c276ba84e74f}{%
+           family={Schull},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a94a5088fdfee9da7a731bf964d454c2}{%
+           family={Asplin},
+           familyi={A\bibinitperiod},
+           given={Brent\bibnamedelima R.},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7004e27c434f552761f2b2b1805a4ad4}{%
+           family={Society\bibnamedelimb for\bibnamedelimb Academic\bibnamedelimb Emergency\bibnamedelima Medicine},
+           familyi={S\bibinitperiod\bibinitdelim f\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Emergency\bibnamedelimb Department\bibnamedelimb Crowding\bibnamedelimb Task\bibnamedelima Force},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{30bb5ee320f05a9df7f48dce204274f5}
+      \strng{fullhash}{9b43ac1ca36c7907be04eae83ac68b51}
+      \strng{bibnamehash}{9b43ac1ca36c7907be04eae83ac68b51}
+      \strng{authorbibnamehash}{9b43ac1ca36c7907be04eae83ac68b51}
+      \strng{authornamehash}{30bb5ee320f05a9df7f48dce204274f5}
+      \strng{authorfullhash}{9b43ac1ca36c7907be04eae83ac68b51}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract Background:  An Institute of Medicine (IOM) report defines six domains of quality of care: safety, patient-centeredness, timeliness, efficiency, effectiveness, and equity. The effect of emergency department (ED) crowding on these domains of quality has not been comprehensively evaluated. Objectives:  The objective was to review the medical literature addressing the effects of ED crowding on clinically oriented outcomes (COOs). Methods:  We reviewed the English-language literature for the years 1989–2007 for case series, cohort studies, and clinical trials addressing crowding’s effects on COOs. Keywords searched included “ED crowding,”“ED overcrowding,”“mortality,”“time to treatment,”“patient satisfaction,”“quality of care,” and others. Results:  A total of 369 articles were identified, of which 41 were kept for inclusion. Study quality was modest; most articles reflected observational work performed at a single institution. There were no randomized controlled trials. ED crowding is associated with an increased risk of in-hospital mortality, longer times to treatment for patients with pneumonia or acute pain, and a higher probability of leaving the ED against medical advice or without being seen. Crowding is not associated with delays in reperfusion for patients with ST-elevation myocardial infarction. Insufficient data were available to draw conclusions on crowding’s effects on patient satisfaction and other quality endpoints. Conclusions:  A growing body of data suggests that ED crowding is associated both with objective clinical endpoints, such as mortality, as well as clinically important processes of care, such as time to treatment for patients with time-sensitive conditions such as pneumonia. At least two domains of quality of care, safety and timeliness, are compromised by ED crowding.}
+      \field{journaltitle}{Academic Emergency Medicine}
+      \field{number}{1}
+      \field{title}{The Effect of Emergency Department Crowding on Clinically Oriented Outcomes}
+      \field{volume}{16}
+      \field{year}{2009}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{doi}
+      \verb https://doi.org/10.1111/j.1553-2712.2008.00295.x
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1553-2712.2008.00295.x
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1553-2712.2008.00295.x
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1553-2712.2008.00295.x
+      \endverb
+      \keyw{emergency department crowding,quality of care,patient safety}
+    \endentry
+    \entry{zibners2006local}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=ac720049bd82c79df9fb876a0e540b13}{%
+           family={Zibners},
+           familyi={Z\bibinitperiod},
+           given={Lara\bibnamedelima M},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea785e7c2efda7a20d87d6a3978c5691}{%
+           family={Bonsu},
+           familyi={B\bibinitperiod},
+           given={Bema\bibnamedelima K},
+           giveni={B\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89fabcdff888afc0a2210396c2393eee}{%
+           family={Hayes},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=480e7285c729b00a6dc2fd89979c5c19}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Daniel\bibnamedelima M},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {LWW}%
+      }
+      \strng{namehash}{13203b658234534ea40e458a68c53021}
+      \strng{fullhash}{bf1e64c20a20906da057e70ff7ce6f8b}
+      \strng{bibnamehash}{bf1e64c20a20906da057e70ff7ce6f8b}
+      \strng{authorbibnamehash}{bf1e64c20a20906da057e70ff7ce6f8b}
+      \strng{authornamehash}{13203b658234534ea40e458a68c53021}
+      \strng{authorfullhash}{bf1e64c20a20906da057e70ff7ce6f8b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Pediatric emergency care}
+      \field{number}{2}
+      \field{title}{Local weather effects on emergency department visits: a time series and regression analysis}
+      \field{volume}{22}
+      \field{year}{2006}
+      \field{pages}{104\bibrangedash 106}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1097/01.pec.0000199561.34475.29
+      \endverb
+    \endentry
+    \entry{GOLMOHAMMADI2016535}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=73329ced34657625400092c8f87eb462}{%
+           family={Golmohammadi},
+           familyi={G\bibinitperiod},
+           given={Davood},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{73329ced34657625400092c8f87eb462}
+      \strng{fullhash}{73329ced34657625400092c8f87eb462}
+      \strng{bibnamehash}{73329ced34657625400092c8f87eb462}
+      \strng{authorbibnamehash}{73329ced34657625400092c8f87eb462}
+      \strng{authornamehash}{73329ced34657625400092c8f87eb462}
+      \strng{authorfullhash}{73329ced34657625400092c8f87eb462}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Recent research has established that Emergency Department (ED) congestion is often caused by the inability to transition patients into inpatient units within the hospital in a timely fashion. This problem, in which the ED boards inpatients, is common across the U.S. Predicting ED patient admission using demographic and clinical information with only a few admission predictor factors investigated so far. We have developed a prediction model that can be used as a decision support tool and help reduce ED boarding. Using secondary data from the ED of a local hospital, we have examined the importance of eight demographic and clinical determinant factors of ED patients' admission to the hospital. We have employed Logistic Regression (LR) and Neural Network (NN) modeling techniques and based on our statistical analysis, we have identified encounter reason, age, and radiology exam type as the most significant factors. We have studied patterns between input variables (i.e. age) and output variables (i.e. admitted or not) and have developed a set of rules of thumb for predicting admissions. These unique rules can be used without any modeling or further investigation during operations, therefore providing important information regarding the ultimate status of a patient after ED operations without any time or cost. The study proves that an admission prediction model based on demographic and clinical determinant factors can accurately estimate the likelihood of patient admission, thus decreasing ED boarding and congestion, both significant problems in hospital operations.}
+      \field{issn}{0925-5273}
+      \field{journaltitle}{International Journal of Production Economics}
+      \field{title}{Predicting hospital admissions to reduce emergency department boarding}
+      \field{volume}{182}
+      \field{year}{2016}
+      \field{pages}{535\bibrangedash 544}
+      \range{pages}{10}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.ijpe.2016.09.020
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0925527316302523
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0925527316302523
+      \endverb
+      \keyw{Emergency operations,Admission,Prediction model,Regression,Neural networks}
+    \endentry
+    \entry{gul2015forecasting}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=33836042bf71a0742a72bd1eb0d9a86c}{%
+           family={Gül},
+           familyi={G\bibinitperiod},
+           given={Muhammet},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95629c4af1f443d2ec74e05b556dad60}{%
+           family={Guneri},
+           familyi={G\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1a4e667cfa140559278cee37d42b422b}
+      \strng{fullhash}{1a4e667cfa140559278cee37d42b422b}
+      \strng{bibnamehash}{1a4e667cfa140559278cee37d42b422b}
+      \strng{authorbibnamehash}{1a4e667cfa140559278cee37d42b422b}
+      \strng{authornamehash}{1a4e667cfa140559278cee37d42b422b}
+      \strng{authorfullhash}{1a4e667cfa140559278cee37d42b422b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Aeronautics and Space Technologies (Havacilik ve Uzay Teknolojileri Dergisi)}
+      \field{month}{07}
+      \field{title}{Forecasting patient length of stay in an emergency department by artificial neural networks}
+      \field{volume}{8}
+      \field{year}{2015}
+      \field{pages}{43\bibrangedash 48}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.7603/s40690-015-0015-7
+      \endverb
+    \endentry
+    \entry{brockwell_introduction_2016}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7938eb94e7146418eee84171bc1f607a}{%
+           family={Peter\bibnamedelimb J.\bibnamedelimi Brockwell},
+           familyi={P\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Richard\bibnamedelimb A.\bibnamedelimi Davis},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7938eb94e7146418eee84171bc1f607a}
+      \strng{fullhash}{7938eb94e7146418eee84171bc1f607a}
+      \strng{bibnamehash}{7938eb94e7146418eee84171bc1f607a}
+      \strng{authorbibnamehash}{7938eb94e7146418eee84171bc1f607a}
+      \strng{authornamehash}{7938eb94e7146418eee84171bc1f607a}
+      \strng{authorfullhash}{7938eb94e7146418eee84171bc1f607a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Time Series and Forecasting}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-319-29854-2
+      \endverb
+    \endentry
+    \entry{james2021introduction}{book}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=df184c5fa522ac8a515ec4de13aef234}{%
+           family={James},
+           familyi={J\bibinitperiod},
+           given={Gareth},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ab16961e0de50711fa6bd9425f9b4a6}{%
+           family={Witten},
+           familyi={W\bibinitperiod},
+           given={Daniela},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f8f737f83d9e451c1afaa13cdc120516}
+      \strng{fullhash}{da61646157a6be769f34984f5cb603b0}
+      \strng{bibnamehash}{da61646157a6be769f34984f5cb603b0}
+      \strng{authorbibnamehash}{da61646157a6be769f34984f5cb603b0}
+      \strng{authornamehash}{f8f737f83d9e451c1afaa13cdc120516}
+      \strng{authorfullhash}{da61646157a6be769f34984f5cb603b0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{978-1-0716-1417-4}
+      \field{title}{An Introduction to Statistical Learning: with Applications in R}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1007/978-1-0716-1418-1
+      \endverb
+      \verb{urlraw}
+      \verb https://www.statlearning.com/
+      \endverb
+      \verb{url}
+      \verb https://www.statlearning.com/
       \endverb
     \endentry
     \entry{Raffel2020T5}{article}{}
@@ -1677,8 +1941,8 @@
       \strng{authorbibnamehash}{21f7721b75bba06d59f9d5ce222a34a5}
       \strng{authornamehash}{93aba8e9bb746e2d8ac216494b952014}
       \strng{authorfullhash}{21f7721b75bba06d59f9d5ce222a34a5}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Journal of Machine Learning Research}
@@ -1752,8 +2016,8 @@
       \strng{authorbibnamehash}{f82970bbd2bdd7a002d2af62b743d5cc}
       \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
       \strng{authorfullhash}{f82970bbd2bdd7a002d2af62b743d5cc}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in Neural Information Processing Systems}
@@ -1795,8 +2059,8 @@
       \strng{authorbibnamehash}{c6c75bd00ce5a488e91a749d8383b3df}
       \strng{authornamehash}{9e4c6012409dc8dd9b2aa198a2059804}
       \strng{authorfullhash}{c6c75bd00ce5a488e91a749d8383b3df}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nature}
@@ -1850,8 +2114,8 @@
       \strng{authorbibnamehash}{c5a2af1517d19596ddb0aa39fd4610ad}
       \strng{authornamehash}{91f35d17764be4acab630afb9a763287}
       \strng{authorfullhash}{c5a2af1517d19596ddb0aa39fd4610ad}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1912.09363}
@@ -1876,8 +2140,8 @@
       \strng{authorbibnamehash}{926269a097c38456f5b32d7efb1d1a80}
       \strng{authornamehash}{926269a097c38456f5b32d7efb1d1a80}
       \strng{authorfullhash}{926269a097c38456f5b32d7efb1d1a80}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Communications of the ACM}
@@ -1948,8 +2212,8 @@
       \strng{authorbibnamehash}{c48de9f516acd1d0d2a1972024f9defc}
       \strng{authornamehash}{7f58aa78e91a8d93106957fe709015cf}
       \strng{authorfullhash}{c48de9f516acd1d0d2a1972024f9defc}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:2410.10393}
@@ -2076,8 +2340,8 @@
       \strng{authorbibnamehash}{6a07888d43afecf31bf39eb49f5f136d}
       \strng{authornamehash}{3b3f6d1c99c023b1a9d6ab544472af0c}
       \strng{authorfullhash}{6a07888d43afecf31bf39eb49f5f136d}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{We introduce Chronos, a simple yet effective framework for pretrained probabilistic time series models. Chronos tokenizes time series values using scaling and quantization into a fixed vocabulary and trains existing transformer-based language model architectures on these tokenized time series via the cross-entropy loss. We pretrained Chronos models based on the T5 family (ranging from 20M to 710M parameters) on a large collection of publicly available datasets, complemented by a synthetic dataset that we generated via Gaussian processes to improve generalization. In a comprehensive benchmark consisting of 42 datasets, and comprising both classical local models and deep learning methods, we show that Chronos models: (a) significantly outperform other methods on datasets that were part of the training corpus; and (b) have comparable and occasionally superior zero-shot performance on new datasets, relative to methods that were trained specifically on them. Our results demonstrate that Chronos models can leverage time series data from diverse domains to improve zero-shot accuracy on unseen forecasting tasks, positioning pretrained models as a viable tool to greatly simplify forecasting pipelines.}
@@ -2120,8 +2384,8 @@
       \strng{authornamehash}{8e799acf30ccc23e029147e768c1b3e7}
       \strng{authorfullhash}{8e799acf30ccc23e029147e768c1b3e7}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://huggingface.co/spaces/Salesforce/GIFT-Eval}}
@@ -2165,8 +2429,8 @@
       \strng{authorbibnamehash}{98211a768d800b6530d4b1a64a8c780a}
       \strng{authornamehash}{bb71c6d72f828091ee76c739c5a6cea0}
       \strng{authorfullhash}{98211a768d800b6530d4b1a64a8c780a}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{17}
@@ -2236,8 +2500,8 @@
       \strng{authorbibnamehash}{68816cb5e946ab9429699ecd59d37fcf}
       \strng{authornamehash}{28558b970cec870af4bf6da95c8d38e6}
       \strng{authorfullhash}{68816cb5e946ab9429699ecd59d37fcf}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Deep learning for time series forecasting has traditionally operated within a one-model-per-dataset framework, limiting its potential to leverage the game-changing impact of large pre-trained models. The concept of universal forecasting, emerging from pre-training on a vast collection of time series datasets, envisions a single Large Time Series Model capable of addressing diverse downstream forecasting tasks. However, constructing such a model poses unique challenges specific to time series data: i) cross-frequency learning, ii) accommodating an arbitrary number of variates for multivariate time series, and iii) addressing the varying distributional properties inherent in large-scale data. To address these challenges, we present novel enhancements to the conventional time series Transformer architecture, resulting in our proposed Masked Encoder-based Universal Time Series Forecasting Transformer (Moirai). Trained on our newly introduced Large-scale Open Time Series Archive ({LOTSA}) featuring over 27B observations across nine domains, Moirai achieves competitive or superior performance as a zero-shot forecaster when compared to full-shot models. Code, data, and model weights can be found at https://github.com/{SalesforceAIResearch}/uni2ts.}
@@ -2279,8 +2543,8 @@
       \strng{authornamehash}{8e799acf30ccc23e029147e768c1b3e7}
       \strng{authorfullhash}{8e799acf30ccc23e029147e768c1b3e7}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.salesforce.com/blog/moirai-2-0/}}
@@ -2348,8 +2612,8 @@
       \strng{authorbibnamehash}{b13d85817dbad8fa8d9a3ecc3bb25872}
       \strng{authornamehash}{412b864aa3b1e9ea4dc53d3c2421cf2c}
       \strng{authorfullhash}{b13d85817dbad8fa8d9a3ecc3bb25872}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{We introduce Sundial, a family of native, flexible, and scalable time series foundation models. To predict the next-patch's distribution, we propose a {TimeFlow} Loss based on flow-matching, which facilitates native pre-training of Transformers on continuous-valued time series without discrete tokenization. Conditioned on arbitrary-length time series, our models are pre-trained without specifying any prior distribution and can generate multiple probable predictions, achieving more flexibility in representation learning than using parametric densities. Towards time series foundation models, we leverage minimal but crucial adaptations of Transformers and curate {TimeBench} with one trillion time points, comprising mostly real-world datasets and synthetic data. By mitigating mode collapse via {TimeFlow} Loss, we pre-train a family of Sundial models on {TimeBench}, which achieve unprecedented model capacity and generalization performance. In addition to excellent scalability, Sundial achieves state-of-the-art results on both point and probabilistic forecasting benchmarks with a just-in-time inference speed, i.e., making zero-shot predictions within a few milliseconds. We believe that Sundial's pioneering generative forecasting capability can improve model reliability in real-world decision-making. Code is available at: https://github.com/thuml/Sundial.}
@@ -2427,8 +2691,8 @@
       \strng{authorbibnamehash}{63dd14e8fba7545e43572c60eb2fb4b2}
       \strng{authornamehash}{35d526d6f1b9ec50627c0917167e272f}
       \strng{authorfullhash}{63dd14e8fba7545e43572c60eb2fb4b2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{In-context learning, the ability of large language models to perform tasks using only examples provided in the prompt, has recently been adapted for time series forecasting. This paradigm enables zero-shot prediction, where past values serve as context for forecasting future values, making powerful forecasting tools accessible to non-experts and increasing the performance when training data are scarce. Most existing zero-shot forecasting approaches rely on transformer architectures, which, despite their success in language, often fall short of expectations in time series forecasting, where recurrent models like {LSTMs} frequently have the edge. Conversely, while {LSTMs} are well-suited for time series modeling due to their state-tracking capabilities, they lack strong in-context learning abilities. We introduce {TiRex} that closes this gap by leveraging {xLSTM}, an enhanced {LSTM} with competitive in-context learning skills. Unlike transformers, state-space models, or parallelizable {RNNs} such as {RWKV}, {TiRex} retains state-tracking, a critical property for long-horizon forecasting. To further facilitate its state-tracking ability, we propose a training-time masking strategy called {CPM}. {TiRex} sets a new state of the art in zero-shot time series forecasting on the {HuggingFace} benchmarks {GiftEval} and Chronos-{ZS}, outperforming significantly larger models including {TabPFN}-{TS} (Prior Labs), Chronos Bolt (Amazon), {TimesFM} (Google), and Moirai (Salesforce) across both short- and long-term forecasts.}
@@ -2521,8 +2785,8 @@
       \strng{authorbibnamehash}{1e48eddf1c91c2fc0e89a1542c16a104}
       \strng{authornamehash}{a6d048ec4dafc4942083c5a0f5dc041d}
       \strng{authorfullhash}{1e48eddf1c91c2fc0e89a1542c16a104}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{The Thirty-eighth Annual Conference on Neural Information Processing Systems}
@@ -2587,8 +2851,8 @@
       \strng{authorbibnamehash}{138b620984178bfaf960c59da39eb14f}
       \strng{authornamehash}{cec83448a93ad6a5cdc6f494a8f2dbcb}
       \strng{authorfullhash}{138b620984178bfaf960c59da39eb14f}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Advances in Neural Information Processing Systems}
@@ -2603,6 +2867,28 @@
       \verb{url}
       \verb https://proceedings.neurips.cc/paper/2017/file/6449f44a102fde848669bdd9eb6b76fa-Paper.pdf
       \endverb
+    \endentry
+    \entry{shchur2025moirai2accuracy}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2ac813bd99d6799fee878bc8ddd32717}{%
+           family={shchur},
+           familyi={s\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ac813bd99d6799fee878bc8ddd32717}
+      \strng{fullhash}{2ac813bd99d6799fee878bc8ddd32717}
+      \strng{bibnamehash}{2ac813bd99d6799fee878bc8ddd32717}
+      \strng{authorbibnamehash}{2ac813bd99d6799fee878bc8ddd32717}
+      \strng{authornamehash}{2ac813bd99d6799fee878bc8ddd32717}
+      \strng{authorfullhash}{2ac813bd99d6799fee878bc8ddd32717}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/SalesforceAIResearch/uni2ts/issues/224}}
+      \field{month}{8}
+      \field{note}{GitHub Issue. SalesforceAIResearch/uni2ts Issue \#224}
+      \field{title}{Moirai2 forecast accuracy drops significantly when \texttt{feat\_dynamic\_real} are present}
+      \field{year}{2025}
     \endentry
   \enddatalist
 \endrefsection

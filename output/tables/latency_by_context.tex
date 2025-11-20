@@ -9,13 +9,13 @@
 168            & 4.0 & 170 & 91.8 & 65.6 & 5.6 & {---} \\
 336            & 6.7 & 169 & 92.9 & 68.8 & 5.8 & {---} \\
 512            & 9.5 & 172 & 94.0 & 70.8 & 7.2 & 110 \\
-720            & {---} & 189 & 91.5 & 73.9 & 12.3 & {---} \\
-2048           & {---} & 192 & 94.3 & 134 & 17.3 & {---} \\
+720            & 13.9 & 189 & 91.5 & 73.9 & 12.3 & {---} \\
+2048           & 41.3 & 192 & 94.3 & 134 & 17.3 & {---} \\
 4096           & {---} & {---} & 103 & 197 & 20.6 & {---} \\
 8760           & {---} & {---} & 93.5 & 437 & 70.8 & {---} \\
 12840          & {---} & {---} & 98.5 & 635 & 94.6 & {---} \\
 \bottomrule
 \end{tabular}
-\caption{Computing time (latency) in seconds for each forecasting model across different context lengths. Latency represents the total time required to generate predictions for the entire test set spanning one year. Missing values indicate the model does not support that context length. Note that multivariate predictions were made on more powerful hardware.}
+\caption{Computing time (latency) in seconds for each forecasting model across different context lengths. Latency represents the total time required to generate predictions for the entire test set spanning one year. "all" represent predictions made with all 167 covariates. Missing values indicate the model does not support that context length. Note that multivariate predictions were made on more powerful hardware.}
 \label{tab:latency_context}
 \end{table}
